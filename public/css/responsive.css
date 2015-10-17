@@ -1,0 +1,32 @@
+@media screen and (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
+  .col-md-6 {
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+  .socials {
+    margin-top: auto;
+  }
+  #carousel {
+    position: relative;
+    z-index: -1;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .navigation-mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .navigation-mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navigation-mobile {
+    display: none !important;
+  }
+}

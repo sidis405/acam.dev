@@ -1,0 +1,1 @@
+<h1><a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-list"></i></a>&nbsp;&nbsp;<span class="admin-page-title">{{$title}}</span></h1>
