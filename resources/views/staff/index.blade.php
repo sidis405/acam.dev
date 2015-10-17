@@ -8,7 +8,7 @@
 
 
 
-                <? $total_types = count($all_staff); $i=1; ?>
+                <?php $total_types = count($all_staff); $i=1; ?>
 
                 @foreach($all_staff as $type)
 
