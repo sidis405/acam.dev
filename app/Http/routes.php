@@ -11,6 +11,7 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
+Route::get('loadMoreActivities', 'HomeController@loadMoreActivities');
 Route::get('/attivita', 'HomeController@index');
 Route::get('/attivita/{slug}', 'ActivitiesController@show');
 

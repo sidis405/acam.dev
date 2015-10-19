@@ -6,6 +6,7 @@ use Acam\Repositories\PagesRepo;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class PagesController extends Controller
 {
@@ -18,6 +19,8 @@ class PagesController extends Controller
      */
     public function show($slug, PagesRepo $pages_repo)
     {
+        Session::put('current_page', $slug);
+
         $pages = array_pluck($pages_repo->getAll()->toArray(), 'slug');
 
         if(!in_array($slug, $pages)) abort(404);

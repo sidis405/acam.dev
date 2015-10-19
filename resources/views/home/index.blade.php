@@ -17,6 +17,12 @@
                     @include('home.partials.activities')
                 </div> <!-- end home-portfolio -->
 
+                    <div id="load-more-activities-url" style="display:none">{{formatLoadMoreUrl($activities->nextPageUrl())}}</div>
+
+                    @if($activities->hasMorePages())
+                    <span class="load-more-activities load-more-section">Visualizza di più</span>
+                    @endif
+
             </div>
 
 @stop

@@ -7,6 +7,7 @@ use Acam\Repositories\TextRepo;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
@@ -17,7 +18,8 @@ class HomeController extends Controller
      */
     public function index(ActivitiesRepo $activities_repo, TextRepo $text_repo)
     {
-        $activities = $activities_repo->getAll();
+        Session::put('current_page', 'home');
+        $activities = $activities_repo->getAll(5);
         $featured = $activities_repo->getFeatured();
         $texts = $text_repo->getAll();
 
@@ -26,69 +28,14 @@ class HomeController extends Controller
         return view('home.index', compact('activities', 'featured', 'texts'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function loadMoreActivities(ActivitiesRepo $activities_repo)
     {
-        //
-    }
+        $activities = $activities_repo->getAll(5);
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return [
+            'layout' => view('home.partials.activities-partial', compact('activities'))->render(), 
+            'url' => str_replace('/?', '?', $activities->nextPageUrl()),
+            'more' => $activities->hasMorePages(), 
+            'galleries' => view('home.partials.activities-partial', compact('activities'))->render()];
     }
 }

@@ -3,10 +3,13 @@
 namespace App\Handlers\Commands\Activities;
 
 use App\Commands\Activities\CreateActivityCommand;
-use App\Events\Activities\ActivityWasCreated;
 use App\Acam\Models\Activities;
+
 use Acam\Repositories\ActivitiesRepo;
+
 use Event;
+use App\Events\Activities\ActivityWasCreated;
+
 use Illuminate\Queue\InteractsWithQueue;
 
 class CreateActivityCommandHandler

@@ -1,9 +1,10 @@
-<div class="container">
+<div class="container nav">
                 <a href="/"><h1 id="logo">ACAM</h1></a>
                 <ul class="navigation">
-                    <li class="current"><a href="/">Home</a></li>
-                    <li><a href="/mission">Chi Siamo</a></li>
-                    <li class="dropdown">
+                    <li @if(\Session::get('current_page') =='home') class="current" @endif><a href="/">Home</a></li>
+                    <li @if(\Session::get('current_page') =='mission') class="current" @endif><a href="/mission">Chi Siamo</a></li>
+                    <li class="dropdown 
+                    @if(in_array(\Session::get('current_page') , array_pluck($types, 'slug'))) current @endif ">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Servizi <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             @foreach($types as $type)
@@ -12,7 +13,7 @@
 
                         </ul>
                     </li>
-                    <li><a href="/network">Collaboratori</a></li>
+                    <li @if(\Session::get('current_page') =='network') class="current" @endif><a href="/network">Collaboratori</a></li>
                     
                     <li><a class="scrollto" href="#footer-contact">Contatti</a></li>
                 </ul>

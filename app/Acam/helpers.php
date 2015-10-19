@@ -1,5 +1,10 @@
 <?php
 
+function formatLoadMoreUrl($input)
+{
+    return str_replace('/?', '/loadMoreActivities?', $input);
+}
+
 function carouselIndicators($featured)
 {
     $counter = 0;

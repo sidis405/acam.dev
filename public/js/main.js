@@ -80,57 +80,33 @@ function animate_scroll (element, variable, offset) {
     }, 600);
 }
 
-$(document).on('click', '.activity-expander', function(){
-
-	var id = $(this).data('id');
-
-	var parent = $(this).parent();	
-
-	var paragraph = $(this).parent().find('p');	
-
-	var full_text_obj = $(this).parent().find('.full-text');	
-    var full_text = $(full_text_obj).text(); 
-	var full_text_height = $(full_text_obj).height()+60;	
-
-	var truncated_text_obj = $(this).parent().find('.truncated-text');	
-	var truncated_text = $(truncated_text_obj).text();   
-	var truncated_text_height = $(truncated_text_obj).height();	
-
-	if($(paragraph).hasClass('truncated'))
-	{
-		$(paragraph).animate({'height': full_text_height}, function(){
-            $(paragraph).html(full_text);
+// Masonry init
+$( window ).load(function() {
+    // var container = document.querySelector('#masonry-container');
+    // var msnry = new Masonry( container, {
+    //   // options
+    //   itemSelector: '.item',
+      
+    // });
+    
+    $('#masonry-container').masonry({
+         itemSelector: '.item',
         });
-        $(paragraph).css('margin-bottom', '60px');
-
-		$(paragraph).removeClass('truncated');
-		$(this).text('Chiudi');
-
-	}else {
-
-        $(paragraph).animate({'height': truncated_text_height}, function(){
-            $(paragraph).html(truncated_text);
-        });
-
-        $(paragraph).css('margin-bottom', '30px');
-
-		$(paragraph).addClass('truncated');
-		$(this).text('Leggi di più');
-	}
 
 });
 
+
 $(document).on('click', '.load-more-activities', function(){
 
-	var url = $(document).find('#load-more-activities-url').text();
-	getActivities(url);
+    var url = $(document).find('#load-more-activities-url').text();
+    getActivities(url);
 
 });
 
 function getActivities (url) {
 
     var last_activity = $('.attivita').last();
-    var navbar_height = parseInt($('.navbar').css('height').replace('px', ''));
+    var navbar_height = 100;
 
     // console.log(last_activity);
 
@@ -139,17 +115,29 @@ function getActivities (url) {
         type: 'GET',
         success: function(data) {
 
-            $('.activities-container').append(data.layout);
-            $('.hidden-galleries').append(data.galleries);
+            var $layout = $(data.layout);
+            $('#masonry-container').append( $layout ).masonry( 'appended', $layout );
+
+            // $('#masonry-container').masonry('destroy');
+            // redoMasonry(data.layout);
+
+            // $('.activities-container').append(layout);
+
+
+            // var $layout = $(data.layout);
+            
+            // $grid.append( $layout ).masonry( 'appended', $layout );
+
             $(document).find('#load-more-activities-url').text(data.url);
 
             var next_activity = $(last_activity).next();
 
-            animate_scroll(next_activity, navbar_height, 25);
+
+            // animate_scroll(next_activity, navbar_height, 25);
 
             if(data.more == false)
             {
-            	$('.load-more-activities').hide();
+                $('.load-more-activities').hide();
             }
 
             return false;
