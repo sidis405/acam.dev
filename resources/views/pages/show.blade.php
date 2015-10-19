@@ -5,7 +5,7 @@
 <div class="container">
 
 
-{!!presentBreadcrumbs(['home', 'servizi'])!!}
+{!!presentBreadcrumbs(['home'])!!}
 
 <div class="clearfix"></div>
                 

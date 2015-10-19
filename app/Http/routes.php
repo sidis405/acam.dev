@@ -24,8 +24,11 @@ Route::get('loadMoreActivities', 'HomeController@loadMoreActivities');
 
 Route::group(array('prefix' => 'admin', 'middleware' => 'auth'), function () {
 
-    Route::post('model/upload_image', 'Admin\FilesController@store');
-    Route::post('model/get_images', 'Admin\FilesController@index');
+    Route::post('model/upload_image', 'Admin\ImagesController@store');
+    Route::post('model/get_images', 'Admin\ImagesController@index');
+
+    Route::post('model/upload_attachment', 'Admin\AttachmentsController@store');
+    Route::post('model/{id}/delete', 'Admin\AttachmentsController@delete');
 
 
     Route::get('/', function(){

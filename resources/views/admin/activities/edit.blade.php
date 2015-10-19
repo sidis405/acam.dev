@@ -28,6 +28,8 @@
     
     @include('admin.gallery.gallery-section', array('model' => $activity, 'model_name' => 'activities', 'model_route' => 'attivita'))
     
+    @include('admin.activities.partials.attachments-partial')
+
     @include('admin.activities.partials.delete-partial')
     
 @stop

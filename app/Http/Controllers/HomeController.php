@@ -19,7 +19,7 @@ class HomeController extends Controller
     public function index(ActivitiesRepo $activities_repo, TextRepo $text_repo)
     {
         Session::put('current_page', 'home');
-        $activities = $activities_repo->getAll(5);
+        $activities = $activities_repo->getAll(15);
         $featured = $activities_repo->getFeatured();
         $texts = $text_repo->getAll();
 
@@ -30,7 +30,7 @@ class HomeController extends Controller
 
     public function loadMoreActivities(ActivitiesRepo $activities_repo)
     {
-        $activities = $activities_repo->getAll(5);
+        $activities = $activities_repo->getAll(15);
 
         return [
             'layout' => view('home.partials.activities-partial', compact('activities'))->render(), 

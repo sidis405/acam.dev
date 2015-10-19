@@ -3,8 +3,9 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAttachmentsTable extends Migration
+class CreateTableURLs extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -12,11 +13,10 @@ class CreateAttachmentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('attachments', function (Blueprint $table) {
+        Schema::create('filer_urls', function(Blueprint $table)
+        {
             $table->increments('id');
-            $table->integer('activity_id');
-            $table->string('path');
-            $table->string('name');
+            $table->string('url');
             $table->timestamps();
         });
     }
@@ -28,6 +28,7 @@ class CreateAttachmentsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('attachments');
+        Schema::drop('filer_urls');
     }
+
 }

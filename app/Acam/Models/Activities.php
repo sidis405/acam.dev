@@ -15,6 +15,11 @@ class Activities extends Model implements HasMedia
 
     protected $presenter = 'Acam\Presenters\ActivityPresenter';
 
+    public function attachments()
+    {
+        return $this->hasMany('Acam\Models\Attachments', 'activity_id');
+    }
+
     public function status()
     {
         return $this->belongsTo('Acam\Models\ActivitiesStatus', 'status_id');

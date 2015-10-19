@@ -3,6 +3,8 @@
 @section('content')
 
 <div class="container">
+<br>
+<br>
                 
                 @include('home.partials.carousel')
                 

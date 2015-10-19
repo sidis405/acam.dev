@@ -72,10 +72,17 @@ img {
 #carousel {
   position: relative;
   z-index: 1;
+  height: 530px;
+  background: red;
 }
+
+
+
 #carousel img {
   margin: 0;
   border: 1px solid #ebebeb;
+  height: 530px;
+  width: 100%;
 }
 .member-col {
   margin: 10px 0;
@@ -156,7 +163,11 @@ img {
 }
 .breadcrumb a {
   color: #454545;
+  margin-bottom: 0!important;
 }
+
+
+
 .separator {
   border-bottom: 1px solid #ebebeb;
   height: 1px;

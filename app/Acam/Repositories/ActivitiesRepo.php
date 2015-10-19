@@ -66,12 +66,12 @@ class ActivitiesRepo
 
     public function getBySlug($slug)
     {
-        return Activities::with('media', 'status', 'featuredImage', 'coverImage')->whereSlug($slug)->first();
+        return Activities::with('media', 'status', 'featuredImage', 'coverImage', 'attachments')->whereSlug($slug)->first();
     }
 
     public function getById($id)
     {
-        return Activities::with('media', 'status', 'featuredImage', 'coverImage')->whereId($id)->first();
+        return Activities::with('media', 'status', 'featuredImage', 'coverImage', 'attachments')->whereId($id)->first();
     }
 
     public function getMediaForId($id)

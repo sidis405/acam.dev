@@ -36,7 +36,7 @@
             @include('layouts.navigation')
         </div>
 
-        <div id="main-wrap"><br>
+        <div id="main-wrap">
 
             @yield('content')
 

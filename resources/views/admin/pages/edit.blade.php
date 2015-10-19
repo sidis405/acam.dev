@@ -42,7 +42,7 @@
             <div class="col-lg-3">
                  <div class="form-group">
                         <div id="selected_image_preview">
-                            <label for="">Foto</label>
+                            <label for="">Foto (1140 x 350px)</label>
                                 @if($page->featured_image_id > 0)
                                  <img style="width:50px" src="/uploads/{{$page->featuredImage->id}}/{{$page->featuredImage->file_name}}?w=50&h=50&fit=crop">   
                                     

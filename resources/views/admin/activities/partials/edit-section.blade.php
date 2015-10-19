@@ -51,7 +51,7 @@
 
                     <div class="form-group">
                         <div id="selected_image_preview">
-                            <label for="">Slide</label>
+                            <label for="">Slide (1140 x 530px)</label>
                                 @if($activity->featured_image_id > 0)
                                  <img style="width:50px" src="/uploads/{{$activity->featuredImage->id}}/{{$activity->featuredImage->file_name}}?w=50&h=50&fit=crop">   
                                     
@@ -65,7 +65,7 @@
 
                     <div class="form-group">
                         <div id="selected_cover_preview">
-                        <label for="">Cover</label>
+                        <label for="">Cover (350 x 256px)</label>
                             @if($activity->cover_image_id > 0)
                              <img style="width:50px" src="/uploads/{{$activity->coverImage->id}}/{{$activity->coverImage->file_name}}?w=50&h=50&fit=crop">   
                                 

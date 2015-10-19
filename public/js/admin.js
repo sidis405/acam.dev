@@ -167,3 +167,8 @@ $('#staff_deletion_form').submit(function() {
     return c; 
 });
 
+$('.attachment_deletion_form').submit(function() {
+    var c = confirm("Sei sicuro di volere cancellare permanenetemente questo allegato?");
+    return c; 
+});
+

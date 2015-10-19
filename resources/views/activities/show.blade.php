@@ -4,11 +4,10 @@
 
             <div class="container">
 
-            <br>
 
-            <h1>{{$activity->title}}</h1>
+            <br>    
+            <br>    
 
-            <br>
                 
                 <div id="carousel" class="carousel slide" data-ride="carousel">
         
@@ -26,7 +25,8 @@
                     <div class="row">
                         <div class="col-md-8">
                             <div class="project-desc">
-                            <h3></h3>
+                            <h1>{{$activity->title}}</h1>
+                            <br>
                                 <p>
                                     {{$activity->subtitle}}
                                     <br><br>
@@ -35,29 +35,21 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="pdf-links">
-                            <h3>Download Documenti</h3>
-                            <ul>                                
-                                <li><i class="fa fa-download"></i> <a href="download/project-10/gazzetta-amministrativa-n2-2014.pdf" target="_blank">Gazzetta Amministrativa n°2 del 2014</a></li>
-                                <li><i class="fa fa-download"></i> <a href="download/project-10/mibact-capolavori-itineranti.pdf" target="_blank">MIBACT, Capolavori Itineranti</a></li>
-                                <li><i class="fa fa-download"></i> <a href="http://www.bollettinodiarcheologiaonline.beniculturali.it/documenti/10/BANDINI.pdf" target="_blank">MIBACT, Capolavori Itineranti - Link 2</a></li>
-                                <li><i class="fa fa-download"></i> <a href="download/project-10/direzione-generale-musei.pdf" target="_blank">MIBACT, Direzione Generale Musei</a></li>
-                                <li><i class="fa fa-download"></i> <a href="download/project-10/intervento-presidente-adsi.pdf" target="_blank">Intervento presidente ADSI</a></li>                                
-                            </ul>
-                            </div>
-                        </div>
+    
+                        @if(count($activity->attachments))
 
                         <div class="col-md-4">
                             <div class="pdf-links">
-                            <h3>Video</h3>
-                            <ul>                                
-                                <li>
-                                    <a class="you" href="https://www.youtube.com/watch?v=Soh17nSjNac">Pietro Ruffo per GNAM</a>
-                                </li>                                
+                            <h3>Download Documenti</h3>
+                            <ul>
+                                @foreach($activity->attachments as $attachment)                               
+                                <li><i class="fa fa-download"></i> <a href="{{$attachment->path}}" target="_blank">{{$attachment->name}}</a></li>                             
+                                @endforeach
                             </ul>
                             </div>
                         </div>
+                        @endif
+
                     </div>
                 </div>
 
