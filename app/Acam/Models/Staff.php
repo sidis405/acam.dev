@@ -25,6 +25,8 @@ class Staff extends Model implements HasMedia
 
     public static function make($name, $intro, $description, $website, $type_id)
     {   
+
+        if(strpos($website, 'http:') < 0) $website = 'http://' . $website;
         
         $staff = new static(compact('name', 'intro', 'description', 'website', 'type_id'));
 
@@ -34,6 +36,9 @@ class Staff extends Model implements HasMedia
     public static function edit($staff_id, $name, $intro, $description, $featured_image_id, $website, $type_id)
     {
         $staff = static::find($staff_id);
+
+
+        if(! strpos($website, 'http:') < 0) $website = 'http://' . $website;
 
         $staff->name                 = $name;
         $staff->intro                = $intro;

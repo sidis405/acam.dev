@@ -28,7 +28,7 @@
                             {!! $staff->description !!}
                         </p>
                         @if(strlen($staff->website) > 0)
-                            <a href="{{$staff->website}}" target="_blank">{{$staff->website}}</a></p>
+                            <a href="{{$staff->website}}" target="_blank">{{str_replace(['http://', 'https://'], '', $staff->website)}}</a></p>
                         @endif
                     </div>
 

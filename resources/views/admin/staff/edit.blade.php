@@ -61,7 +61,7 @@
             <div class="col-lg-12">
                 <div class="form-group">
                     <label>Website</label>
-                    <input class="form-control" name="website" placeholder="Website" value="{{old('website', $staff->website)}}" >
+                    <input class="form-control" name="website" placeholder="Sito internet (es. http://sito.com)" value="{{old('website', $staff->website)}}" >
                 </div>
                 <div class="form-group">
                  
