@@ -1,4 +1,4 @@
-<div class="container nav">
+<div class="container navbar">
     <a href="/"><h1 id="logo">ACAM</h1></a>
     <ul class="navigation">
         <li @if(\Session::get('current_page') =='home') class="current" @endif><a href="/">Home</a></li>

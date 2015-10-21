@@ -1,17 +1,18 @@
 // Smooth scroll to section top
-$( window ).load(function() {
-    $('a.scrollto[href*=#]').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-        && location.hostname == this.hostname) {
-        var $target = $(this.hash);
-        $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-        if ($target.length) {
-        var targetOffset = $target.offset().top;
-        $('html,body').animate({scrollTop: targetOffset -70}, 1000);
-        return false;}
-        }
-    });
-});
+// $( window ).load(function() {
+//     $('a.scrollto[href*=#]').click(function() {
+//         console.log('foo');
+//         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+//         && location.hostname == this.hostname) {
+//         var $target = $(this.hash);
+//         $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+//         if ($target.length) {
+//         var targetOffset = $target.offset().top;
+//         $('html,body').animate({scrollTop: targetOffset -70}, 1000);
+//         return false;}
+//         }
+//     });
+// });
 
 // Masonry init
 $( window ).load(function() {
@@ -65,12 +66,14 @@ $(document).on('click', '.gallery-button', function() {
 
 });
 
-$('.item').click(function() {
+$('.item').click(function(e) {
 
-	var url = $(this).data('url');
+    e.preventDefault();
+
+	var url = $(this).attr('href');
 	var navbar_height = parseInt($('.navbar').css('height').replace('px', ''));
 
-    animate_scroll(url, navbar_height, 25);
+    animate_scroll(url, 0, 25);
 
 });
 

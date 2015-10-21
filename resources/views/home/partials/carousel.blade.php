@@ -12,9 +12,10 @@
                        @foreach ($featured as $item) 
 
 
-                    <div class="item <?php if ($first) { echo 'active'; } $first=false; ?>">
-                      <a class="scrollto" href="#{{$item->slug}}"><img src="{{$item->present()->slideImageUrl()}}" alt=""></a>
-                    </div>  
+                      <a href="#{{$item->slug}}" class="item scrollto <?php if ($first) { echo 'active'; } $first=false; ?>" style="background: url({{$item->present()->slideImageUrl()}}) no-repeat center center;">
+
+                      </a>  
+
 
                   @endforeach  
 
