@@ -12,8 +12,8 @@
                                 <li><i class="fa fa-phone"></i> +39 06 60661294</li> <br>
                                 <li class="socials">Follow us: <br>
                                     <!-- <a href="#"><img height="48" width="48" src="img/facebook.png" alt="Facebook"></a> -->
-                                    <a href="https://twitter.com/acamprovides" target="_blank"><img height="48" width="48" src="img/twitter.png" alt="Twitter"></a>
-                                    <a href="http://www.linkedin.com/company/acam-srl" target="_blank"><img height="48" width="48" src="img/linkedin.png" alt="LinkdIn"></a>
+                                    <a href="https://twitter.com/acamprovides" target="_blank"><img height="48" width="48" src="/img/twitter.png" alt="Twitter"></a>
+                                    <a href="http://www.linkedin.com/company/acam-srl" target="_blank"><img height="48" width="48" src="/img/linkedin.png" alt="LinkdIn"></a>
                                 </li>
                             </ul>
                         </p>
