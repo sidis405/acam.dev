@@ -14,8 +14,8 @@
 
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner">
-                    <div class="item active">
-                      <img src="{{$activity->present()->slideImageUrl()}}" alt="">
+                    <div class="item active" style="background: url({{$activity->present()->slideImageUrl()}}) no-repeat center center;">
+
                     </div>                    
                   </div>
 
