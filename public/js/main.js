@@ -19,7 +19,7 @@ $( window ).load(function() {
     var container = document.querySelector('#masonry-container');
     var msnry = new Masonry( container, {
       // options
-      itemSelector: '.item',
+      itemSelector: '.masonry_item',
       
     });
 });
@@ -84,19 +84,19 @@ function animate_scroll (element, variable, offset) {
 }
 
 // Masonry init
-$( window ).load(function() {
-    // var container = document.querySelector('#masonry-container');
-    // var msnry = new Masonry( container, {
-    //   // options
-    //   itemSelector: '.item',
+// $( window ).load(function() {
+//     // var container = document.querySelector('#masonry-container');
+//     // var msnry = new Masonry( container, {
+//     //   // options
+//     //   itemSelector: '.masonry_item',
       
-    // });
+//     // });
     
-    $('#masonry-container').masonry({
-         itemSelector: '.item',
-        });
+//     $('#masonry-container').masonry({
+//          itemSelector: '.masonry_item',
+//         });
 
-});
+// });
 
 
 $(document).on('click', '.load-more-activities', function(){
