@@ -73,6 +73,7 @@ $('.item, .navigation li:last-of-type').click(function(e) {
 	var url = $(this).attr('href');
 	var navbar_height = parseInt($('.navbar').css('height').replace('px', ''));
 
+    console.log(url);
     animate_scroll(url, 0, 25);
 
 });
