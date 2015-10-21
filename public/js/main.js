@@ -66,20 +66,18 @@ $(document).on('click', '.gallery-button', function() {
 
 });
 
-$('.item, .navigation li:last-of-type').click(function(e) {
+$('.item, .navigation li:last-of-type a').click(function(e) {
 
     e.preventDefault();
 
 	var url = $(this).attr('href');
 	var navbar_height = parseInt($('.navbar').css('height').replace('px', ''));
 
-    console.log($(this));
     animate_scroll(url, 0, 25);
 
 });
 
 function animate_scroll (element, variable, offset) {
-  console.log(element);
     $('html, body').stop().animate({
         scrollTop: $(element).offset().top - variable - offset
     }, 600);
