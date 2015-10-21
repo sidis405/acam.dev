@@ -78,6 +78,7 @@ $('.item, .navigation li:last-of-type').click(function(e) {
 });
 
 function animate_scroll (element, variable, offset) {
+  console.log(element);
     $('html, body').stop().animate({
         scrollTop: $(element).offset().top - variable - offset
     }, 600);
