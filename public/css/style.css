@@ -502,3 +502,10 @@ span.load-more-section {
   -webkit-transition: 0.25s;
           transition: 0.25s;
 }
+.navigation {
+  padding-left: 0;
+}
+
+.carousel .item {
+  background-size: cover;
+}
