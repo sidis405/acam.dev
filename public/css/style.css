@@ -507,5 +507,5 @@ span.load-more-section {
 }
 
 .carousel .item {
-  background-size: cover;
+  background-size: cover!important;
 }
