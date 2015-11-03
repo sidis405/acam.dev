@@ -1,4 +1,4 @@
-@extends('layouts.master')
+	@extends('layouts.master')
 
 @section('content')
 
@@ -11,7 +11,7 @@
                 
                 <h1><span class="{{$page->class}}">{{$page->title}}</span></h1>
 
-                @if(strlen($page->featured_image_id) > 0)
+                @if($page->featured_image_id > 0)
                 <img class="img-responsive" src="{{$page->present()->featuredImageUrl()}}" alt="">   
                 @endif
 

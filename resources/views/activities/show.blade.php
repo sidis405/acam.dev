@@ -12,12 +12,13 @@
                 <div id="carousel" class="carousel slide" data-ride="carousel">
         
 
-                  <!-- Wrapper for slides -->
+                   @if($activity->featured_image_id > 0)
                   <div class="carousel-inner">
                     <div class="item active" style="background: url({{$activity->present()->slideImageUrl()}}) no-repeat center center;">
 
                     </div>                    
                   </div>
+                  @endif
 
                 </div>
 

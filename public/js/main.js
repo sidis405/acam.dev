@@ -66,7 +66,7 @@ $(document).on('click', '.gallery-button', function() {
 
 });
 
-$('.item, .navigation li:last-of-type a').click(function(e) {
+$('.item, .scrollContact').click(function(e) {
 
     e.preventDefault();
 

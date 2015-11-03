@@ -17,6 +17,6 @@ class ActivityPresenter extends Presenter
             return "/uploads/" . $this->coverImage->id ."/". $this->coverImage->file_name . "?w=343&h=278&fit=crop";
         }
 
-        return "/img/activity-holder.jpg";
+        return "/img/placeholder-acam.jpg";
     }
 }
