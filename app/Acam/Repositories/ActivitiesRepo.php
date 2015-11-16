@@ -64,6 +64,15 @@ class ActivitiesRepo
         }
     }
 
+    public function getAllFront($howMany = null)
+    {
+        if ($howMany) {
+            return Activities::with('type', 'media', 'status', 'featuredImage', 'coverImage')->where('featured_image_id', '>', 0)->latest()->simplePaginate($howMany);
+        } else {
+            return Activities::with('type', 'media', 'status', 'featuredImage', 'coverImage')->where('featured_image_id', '>', 0)->latest()->get();
+        }
+    }
+
     public function getBySlug($slug)
     {
         return Activities::with('media', 'status', 'featuredImage', 'coverImage', 'attachments')->whereSlug($slug)->first();

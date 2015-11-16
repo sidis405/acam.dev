@@ -10,6 +10,6 @@ class CoverImage extends Model
 
     public function activities()
     {
-        return $this->hasMany('Acam\Models\Activity', 'featured_image_id');
+        return $this->hasMany('Acam\Models\Activity', 'cover_image_id');
     }
 }
