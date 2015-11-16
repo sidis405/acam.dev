@@ -142,7 +142,7 @@ Route::group(array('prefix' => 'admin', 'middleware' => 'auth'), function () {
 
     Route::post('pagine/{id}', [
         'as'    => 'admin_update_pages',
-        'uses'  => 'Admin\Pagescontroller@update'
+        'uses'  => 'Admin\PagesController@update'
         ]);
 
 });

@@ -14,7 +14,7 @@
         </li>
         <li @if(\Session::get('current_page') =='network') class="current" @endif><a href="/network">Collaboratori</a></li>
         
-        <li><a class="scrollto" href="#footer-contact">Contatti</a></li>
+        <li><a class="scrollto scrollContact" href="#footer-contact">Contatti</a></li>
     </ul>
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
