@@ -395,6 +395,12 @@ img {
   position: relative;
   z-index: 1;
 }
+#footer .socials i {
+  font-size: 30px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
 #footer p {
   margin: 0;
   font-size: 12px;
@@ -409,12 +415,18 @@ img {
 #footer h3 {
   text-transform: none;
 }
+#footer .btn-instagram {
+  margin-top: 20px;
+  border: 0;    
+  color: #fff;
+  background: #aaaaaa;
+}
 #masonry-container {
   width: inherit;
   margin-left: -15px;
 }
 .socials {
-  margin-top: 65px;
+  margin-top: 90px;
 }
 .network p {
   text-align: left;

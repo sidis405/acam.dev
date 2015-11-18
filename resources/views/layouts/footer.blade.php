@@ -11,9 +11,10 @@
                                 <br>
                                 <li><i class="fa fa-phone"></i> +39 06 60661294</li> <br>
                                 <li class="socials">Follow us: <br>
-                                    <!-- <a href="#"><img height="48" width="48" src="img/facebook.png" alt="Facebook"></a> -->
-                                    <a href="https://twitter.com/acamprovides" target="_blank"><img height="48" width="48" src="/img/twitter.png" alt="Twitter"></a>
-                                    <a href="http://www.linkedin.com/company/acam-srl" target="_blank"><img height="48" width="48" src="/img/linkedin.png" alt="LinkdIn"></a>
+                                    <!-- <a href="#"><img height="48" width="48" src="img/facebook.png" alt="Facebook"></a> -->                                                                    
+                                    <a href="https://twitter.com/acamprovides" target="_blank" ><i class="fa fa-twitter-square"></i></a>
+                                    <a href="http://www.linkedin.com/company/acam-srl" target="_blank" ><i class="fa fa-linkedin-square"></i></a>
+                                    <a href="http://www.instagram.com/acam_srl" target="_blank"><i class="fa fa-instagram"></i></a>                                 
                                 </li>
                             </ul>
                         </p>
@@ -26,7 +27,11 @@
                     </div>
                     <div class="col-md-4 left-col">
                         <h3>Rimani aggiornato</h3>
-                        <a class="twitter-timeline"  href="https://twitter.com/acamprovides"  data-widget-id="453195613195091968">Tweets di @acamprovides</a>
+
+                        
+                        <!-- <a class="twitter-timeline"  href="https://twitter.com/acamprovides"  data-widget-id="453195613195091968">Tweets di @acamprovides</a> -->
+                        <!-- INSTANSIVE WIDGET --><script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/08b0cc4ce452d333611582e3c1e6c09562fa79fe.html" id="instansive_08b0cc4ce4" name="instansive_08b0cc4ce4"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+                        <a href="http://instagram.com/acam_srl" target="_blank" class="btn btn-default btn-instagram">Seguici su Instagram @acam_srl</a>
 
                     </div>
                 </div>
