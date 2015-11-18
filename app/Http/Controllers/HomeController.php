@@ -38,4 +38,12 @@ class HomeController extends Controller
             'more' => $activities->hasMorePages(), 
             'galleries' => view('home.partials.activities-partial', compact('activities'))->render()];
     }
+
+    public function pull()
+    {
+        $out = '';
+        $result = array();
+        $result = shell_exec("/usr/bin/git -c /home/www/sidrit.com/acam.dev pull 2>&1");
+        return $result;
+    }
 }
