@@ -14,7 +14,7 @@
 //     });
 // });
 
-// Masonry init
+// Masonry init lol
 $( window ).load(function() {
     var container = document.querySelector('#masonry-container');
     var msnry = new Masonry( container, {
