@@ -52,7 +52,7 @@ $(document).ready(function(){
     message: "ACAM utilizza cookies di terze parti. Continuando la navigazione ne accetti l'utilizzo. ",
     policyButton: true,
     policyText: 'Maggiori informazioni',
-    policyURL: 'policy.html',
+    policyURL: 'policy',
     acceptText: 'Ok',
     fixed: true    
   });

@@ -39,6 +39,11 @@ class HomeController extends Controller
             'galleries' => view('home.partials.activities-partial', compact('activities'))->render()];
     }
 
+    public function policy()
+    {
+        return view('home.privacy');
+    }
+
     public function pull()
     {
         $out = '';

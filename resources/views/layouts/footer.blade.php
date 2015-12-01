@@ -30,14 +30,14 @@
 
                         
                         <!-- <a class="twitter-timeline"  href="https://twitter.com/acamprovides"  data-widget-id="453195613195091968">Tweets di @acamprovides</a> -->
-                        <!-- INSTANSIVE WIDGET --><script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/08b0cc4ce452d333611582e3c1e6c09562fa79fe.html" id="instansive_08b0cc4ce4" name="instansive_08b0cc4ce4"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
-                        <a href="http://instagram.com/acam_srl" target="_blank" class="btn btn-default btn-instagram">Seguici su Instagram @acam_srl</a>
+                        <!-- INSTANSIVE WIDGET --><script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/58f79f7cd5e2514d57d42731c36a0b68536edc4e.html" id="instansive_58f79f7cd5" name="instansive_58f79f7cd5"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+                        <!-- <a href="http://instagram.com/acam_srl" target="_blank" class="btn btn-default btn-instagram">Seguici su Instagram @acam_srl</a> -->
 
                     </div>
                 </div>
             </div>
 
             <div class="container credits">
-                <p>Copyright © ACAM 2012-2014. All rights reserved / <a href="policy.html">Privacy Policy</a>. Webdesign by <a href="http://www.officine06.com" target="_blank">Officine06</a>.</p>
+                <p>Copyright © ACAM 2012-2014. All rights reserved / <a href="policy">Privacy Policy</a>. Webdesign by <a href="http://www.officine06.com" target="_blank">Officine06</a>.</p>
                 <p>ACAM s.r.l. - via Savoia 84, 00198 Roma - Partita IVA / CF: 12702661005 - CCIAA: RM-12702661005 - REA: RM-1394196 - PEC: <a href="mailto:acamsrl@legalmail.it">acamsrl@legalmail.it</a></p>
             </div>
