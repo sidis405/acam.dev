@@ -407,7 +407,7 @@ img {
   font-size: 12px;
 }
 #footer .container {
-  padding: 30px 15px 0 15px;
+  padding: 30px 15px 30px 15px;
   border-bottom: 1px solid #ebebeb;
 }
 #footer #footer-contact {

@@ -1,4 +1,4 @@
-<div class="container" id="footer-contact">
+<div class="container" id="footer-contact" style="padding-bottom: 0;">
                 <div class="row">
                     <div class="col-md-4 left-col">
                         <h3>Contatti</h3>
