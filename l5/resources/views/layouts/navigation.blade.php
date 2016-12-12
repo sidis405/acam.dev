@@ -1,4 +1,5 @@
 <div class="container navbar">
+    <a href="http://areatecnica.acamprovides.com"><h1 id="logo-areea">Areea</h1></a>
     <a href="/"><h1 id="logo">ACAM</h1></a>
     <ul class="navigation">
         <li @if(\Session::get('current_page') =='home') class="current" @endif><a href="/">Home</a></li>
@@ -12,6 +13,7 @@
                 @endforeach
             </ul>
         </li>
+        <li style="text-transform: none;"><a href="http://areatecnica.acamprovides.com">AR[e]A tecnica</a></li>
         <li @if(\Session::get('current_page') =='network') class="current" @endif><a href="/network">Collaboratori</a></li>
         
         <li><a class="scrollto scrollContact" href="#footer-contact">Contatti</a></li>
@@ -34,6 +36,7 @@
             @foreach($types as $type)
             <li><a href="{{$type->slug}}"><span class="{{$type->class}}-label">{{$type->type}}</span></a></li>
             @endforeach
+            <li style="text-transform: none;"><a href="http://areatecnica.acamprovides.com">AR[e]A tecnica</a></li>
             <li><a href="/network">Collaboratori</a></li>
             
             

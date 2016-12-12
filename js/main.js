@@ -54,7 +54,8 @@ $(document).ready(function(){
     policyText: 'Maggiori informazioni',
     policyURL: 'policy',
     acceptText: 'Ok',
-    fixed: true    
+    fixed: true,
+    bottom: true  
   });
 });
 

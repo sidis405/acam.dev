@@ -3,10 +3,9 @@
                     <div class="col-md-4 left-col">
                         <h3>Contatti</h3>
                         <p>
-                            <ul class="contact-info">
+                            <ul  style="background: #f2f2f2; padding: 23px; height: 239px;" class="contact-info">
                                 <li><i class="fa fa-map-marker"></i> Via Savoia, 84 - 00198 Roma, Italia</li>
-                                <li><i class="fa fa-map-marker"></i> Via Bertoloni, 3 - 00197 Roma, Italia</li>
-                                <br>
+                                <li><i class="fa fa-map-marker"></i> Via Bertoloni, 3 - 00197 Roma, Italia</li>                                
                                 <li><i class="fa fa-envelope"></i> <a href="mailto:info@acamprovides.com">info@acamprovides.com</a></li>
                                 <br>
                                 <li><i class="fa fa-phone"></i> +39 06 60661294</li> <br>
