@@ -16,13 +16,17 @@
 
 // Masonry init lol
 $( window ).load(function() {
-    var container = document.querySelector('#masonry-container');
+    doMasonry();
+});
+
+function doMasonry() {
+  var container = document.querySelector('#masonry-container');
     var msnry = new Masonry( container, {
       // options
       itemSelector: '.masonry_item',
       
     });
-});
+}
 
 $(document).ready(function() {
     $('.you').magnificPopup({
@@ -120,7 +124,12 @@ function getActivities (url) {
         success: function(data) {
 
             var $layout = $(data.layout);
-            $('#masonry-container').append( $layout ).masonry( 'appended', $layout );
+            $('#masonry-container').append( $layout )
+            $('#masonry-container').masonry( 'appended', $layout );
+            setTimeout(function(){
+              doMasonry();
+            }, 100)
+
 
             // $('#masonry-container').masonry('destroy');
             // redoMasonry(data.layout);
