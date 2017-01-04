@@ -1,8 +1,8 @@
 <div class="container navbar">
-    <a href="http://areatecnica.acamprovides.com"><h1 id="logo-areea">Areea</h1></a>
+    <!-- <a href="http://areatecnica.acamprovides.com"><h1 id="logo-areea">Areea</h1></a> -->
     <a href="/"><h1 id="logo">ACAM</h1></a>
     <ul class="navigation">
-        <li @if(\Session::get('current_page') =='home') class="current" @endif><a href="/">Home</a></li>
+        <li @if(\Session::get('current_page') =='home') class="current" @endif><a href="/">Acam</a></li>
         <li @if(\Session::get('current_page') =='mission') class="current" @endif><a href="/mission">Chi Siamo</a></li>
         <li class="dropdown
             @if(in_array(\Session::get('current_page') , array_pluck($types, 'slug'))) current @endif ">
@@ -13,8 +13,9 @@
                 @endforeach
             </ul>
         </li>
-        <li style="text-transform: none;"><a href="http://areatecnica.acamprovides.com">AR[e]A tecnica</a></li>
+        <li><a href="/#ancora" class="scroller">Portfolio</a></li>
         <li @if(\Session::get('current_page') =='network') class="current" @endif><a href="/network">Collaboratori</a></li>
+        <li style="text-transform: none;"><a href="http://areatecnica.acamprovides.com">AR[e]A tecnica</a></li>
         
         <li><a class="scrollto scrollContact" href="#footer-contact">Contatti</a></li>
     </ul>
@@ -30,14 +31,15 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="navigation-mobile">
-            <li class="current"><a href="/">Home</a></li>
+            <li class="current"><a href="/">Acam</a></li>
             <li><a href="/mission">Chi siamo</a></li>
             <li><a href="#">Servizi</a></li>
             @foreach($types as $type)
             <li><a href="{{$type->slug}}"><span class="{{$type->class}}-label">{{$type->type}}</span></a></li>
             @endforeach
-            <li style="text-transform: none;"><a href="http://areatecnica.acamprovides.com">AR[e]A tecnica</a></li>
+            <li><a href="#masonry-container" class="scroller">Portfolio</a></li>
             <li><a href="/network">Collaboratori</a></li>
+            <li style="text-transform: none;"><a href="http://areatecnica.acamprovides.com">AR[e]A tecnica</a></li>
             
             
             <li><a class="scrollto" href="#footer-contact">Contatti</a></li>

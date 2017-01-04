@@ -1,3 +1,16 @@
+#footer-contact {
+  text-align: center;
+}
+
+.dropdown-menu>li>a {
+  text-transform: none;
+  font-size: 17px;
+}
+
+.navigation a:focus {
+    text-decoration: none;
+}
+
 #cookie-bar {
   z-index: 9999;
   min-height: 30px !important;
@@ -131,8 +144,8 @@ img {
   border-bottom: 1px solid #ebebeb;
 }
 #logo {
-  width: 220px;
-  height: 130px;
+  width: 195px;
+  height: 131px;
   float: left;
   background: url(../img/logo-acam.png) no-repeat;
   margin-top: 15px;
@@ -548,6 +561,14 @@ span.load-more-section {
     .carousel .item {
         height: 400px;
      }
+     .navigation {
+      margin-top: 60px;
+     }
+     #logo {
+      width: 150px;
+      height: 110px;
+      background-size: contain;
+     }
      .socials {margin-top: 0;}
      .map-container iframe {
         position: absolute;
@@ -556,4 +577,18 @@ span.load-more-section {
         width: 100%;
         height: 96%;
       }
+}
+
+@media screen and (max-width: 767px) {
+  #logo {
+      width: 150px;
+      height: 110px;
+      background-size: contain;
+     }
+  .navbar {
+    margin-bottom: 0;
+  }
+  #header {
+    height: auto;
+  }
 }

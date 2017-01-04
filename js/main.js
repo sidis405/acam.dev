@@ -1,18 +1,19 @@
 // Smooth scroll to section top
-// $( window ).load(function() {
-//     $('a.scrollto[href*=#]').click(function() {
-//         console.log('foo');
-//         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-//         && location.hostname == this.hostname) {
-//         var $target = $(this.hash);
-//         $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-//         if ($target.length) {
-//         var targetOffset = $target.offset().top;
-//         $('html,body').animate({scrollTop: targetOffset -70}, 1000);
-//         return false;}
-//         }
-//     });
-// });
+$( window ).load(function() {
+    $('a.scroller[href*=#]').click(function() {
+        console.log('foo');
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+        && location.hostname == this.hostname) {
+        var $target = $(this.hash);
+        $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+            if ($target.length) {
+            var targetOffset = $target.offset().top;
+            $('html,body').animate({scrollTop: targetOffset -0}, 300);
+            return false;
+            }
+        }
+    });
+});
 
 // Masonry init lol
 $( window ).load(function() {
@@ -27,6 +28,7 @@ function doMasonry() {
       
     });
 }
+
 
 $(document).ready(function() {
     $('.you').magnificPopup({
