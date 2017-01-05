@@ -23,7 +23,7 @@
                     <div id="load-more-activities-url" style="display:none">{{formatLoadMoreUrl($activities->nextPageUrl())}}</div>
 
                     @if($activities->hasMorePages())
-                    <span class="load-more-activities load-more-section">Visualizza di più</span>
+                    <span style="font-size: 18px" class="load-more-activities load-more-section">...</span>
                     @endif
 
             </div>
