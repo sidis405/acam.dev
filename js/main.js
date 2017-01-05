@@ -1,9 +1,25 @@
+$(document).ready(function(){
+    if (location.hash) {
+      setTimeout(function() {
+
+        window.scrollTo(0, 0);
+      }, 1);
+
+      var target = $(location.hash);
+      // console.log(target);
+      if (target.length) {
+      var targetOffset = target.offset().top;
+      $('html,body').animate({scrollTop: targetOffset -0}, 300);
+      
+    }
+    }
+});
+
 // Smooth scroll to section top
 $( window ).load(function() {
-    $('a.scroller[href*=#]').click(function() {
-        console.log('foo');
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-        && location.hostname == this.hostname) {
+    $('a.scroller[href*=#]').click(function(event) {
+        // event.preventDefault();
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         var $target = $(this.hash);
         $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
             if ($target.length) {
