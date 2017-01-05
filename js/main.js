@@ -9,7 +9,7 @@ $(document).ready(function(){
       // console.log(target);
       if (target.length) {
       var targetOffset = target.offset().top;
-      $('html,body').animate({scrollTop: targetOffset -0}, 300);
+      $('html,body').animate({scrollTop: targetOffset -0}, 800);
       
     }
     }
@@ -24,7 +24,7 @@ $( window ).load(function() {
         $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
             if ($target.length) {
             var targetOffset = $target.offset().top;
-            $('html,body').animate({scrollTop: targetOffset -0}, 300);
+            $('html,body').animate({scrollTop: targetOffset -0}, 800);
             return false;
             }
         }
@@ -103,7 +103,7 @@ $('.item, .scrollContact').click(function(e) {
 function animate_scroll (element, variable, offset) {
     $('html, body').stop().animate({
         scrollTop: $(element).offset().top - variable - offset
-    }, 600);
+    }, 1800);
 }
 
 // Masonry init

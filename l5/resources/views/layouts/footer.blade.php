@@ -2,14 +2,14 @@
                 <div class="row">
                     <div class="col-md-12">
                         <p>
-                            <ul  style="background: #f2f2f2; padding: 23px; height: 239px;" class="contact-info">
-                                <li><i class="fa fa-map-marker"></i> Via Savoia, 84 - 00198 Roma, Italia</li>
-                                <li><i class="fa fa-map-marker"></i> Via Bertoloni, 3 - 00197 Roma, Italia</li>                                
-                                <li><i class="fa fa-envelope"></i> <a href="mailto:info@acamprovides.com">info@acamprovides.com</a></li>
-                                <br>
-                                <li><i class="fa fa-phone"></i> +39 06 60661294</li> <br>
-                                <li class="socials">Follow us: <br>
-                                    <a href="" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                            <ul  style="background: #f2f2f2; padding: 23px;" class="contact-info">
+                                <li style="display: inline"><i class="fa fa-map-marker"></i> Via Savoia, 84 - 00198 Roma, Italia | </li>
+                                <li style="display: inline"><i class="fa fa-map-marker"></i> Via Bertoloni, 3 - 00197 Roma, Italia</li> 
+                                <br>                      
+                                <li style="display: inline-block; margin-top: 5px;"><i class="fa fa-envelope"></i> <a href="mailto:info@acamprovides.com">info@acamprovides.com</a></li>
+                                <li style="display: inline;">| <i class="fa fa-phone"></i> +39 06 60661294</li> <br>
+                                <li class="socials">Follow us: 
+                                    <!-- <a href="" target="_blank"><i class="fa fa-facebook-square"></i></a> -->
                                     <a href="http://www.instagram.com/acam_srl" target="_blank"><i class="fa fa-instagram"></i></a>                 
                                 </li>
                             </ul>
