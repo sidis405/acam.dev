@@ -13,7 +13,7 @@
                 @endforeach
             </ul>
         </li>
-        <li><a href="/#ancora" class="scroller">Portfolio</a></li>
+        <li><a href="/#portfolio" class="scroller">Portfolio</a></li>
         <li @if(\Session::get('current_page') =='network') class="current" @endif><a href="/network">Collaboratori</a></li>
         <li style="text-transform: none;"><a href="http://areatecnica.acamprovides.com">AR[e]A tecnica</a></li>
         
@@ -37,7 +37,7 @@
             @foreach($types as $type)
             <li><a href="{{$type->slug}}"><span class="{{$type->class}}-label">{{$type->type}}</span></a></li>
             @endforeach
-            <li><a href="#masonry-container" class="scroller">Portfolio</a></li>
+            <li><a href="/#portfolio" class="scroller">Portfolio</a></li>
             <li><a href="/network">Collaboratori</a></li>
             <li style="text-transform: none;"><a href="http://areatecnica.acamprovides.com">AR[e]A tecnica</a></li>
             
