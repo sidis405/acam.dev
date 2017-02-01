@@ -15,7 +15,8 @@
                             <ul style="padding: 23px;" class="contact-info">
                                 <li class="socials">Follow us: <br>
                                     <!-- <a href="" target="_blank"><i class="fa fa-facebook-square"></i></a> -->
-                                    <a href="http://www.instagram.com/acam_srl" target="_blank"><i class="fa fa-instagram"></i></a>                 
+                                    <a href="https://www.instagram.com/acam__srl/" target="_blank"><i class="fa fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/company/acam-srl?trk=top_nav_home" target="_blank"><i class="fa fa-linkedin-square"></i></a>  
                                 </li>
                             </ul>
                         </p>
