@@ -369,14 +369,16 @@ img {
   text-align: justify;
 }
 .project-info .pdf-links {
-  background: #ebebeb;
-  margin-top: 35px;
+  /*background: #ebebeb;*/
+  margin-top: 15px;
 }
 .project-info .pdf-links h3 {
-  padding: 15px 15px 0;
+  padding: 0px 15px 0;
+  padding-left: 0;
+  text-transform: none;
 }
 .project-info .pdf-links ul {
-  padding: 0 30px 15px 15px;
+  padding: 0 30px 15px 0px;
 }
 .project-info .pdf-links ul li {
   list-style: none;
@@ -625,3 +627,20 @@ span.load-more-section {
     height: auto;
   }
 }
+
+.network h1 {
+  text-transform: none;
+}
+.page h2, .page h1 {
+  text-transform: none;
+}
+.project-desc h1 {
+  text-transform: none;
+}
+
+.shoutouts h1 {
+  text-transform: none;
+}
+
+
+

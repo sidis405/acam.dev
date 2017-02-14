@@ -24,7 +24,7 @@
 
                 <div class="project-info">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                             <div class="project-desc">
                             <h1>{{$activity->title}}</h1>
                             <br>
@@ -36,12 +36,13 @@
                                 </p>
                             </div>
                         </div>
-    
+                    </div>
+                    <div class="row">
                         @if(count($activity->attachments))
 
-                        <div class="col-md-4">
+                        <div class="col-md-12">
                             <div class="pdf-links">
-                            <h3>Download Documenti</h3>
+                            <h3>Download</h3>
                             <ul>
                                 @foreach($activity->attachments as $attachment)                               
                                 <li><i class="fa fa-download"></i> <a href="{{$attachment->path}}" target="_blank">{{$attachment->name}}</a></li>                             
@@ -50,7 +51,6 @@
                             </div>
                         </div>
                         @endif
-
                     </div>
                 </div>
 

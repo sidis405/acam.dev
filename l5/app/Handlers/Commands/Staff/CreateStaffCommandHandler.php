@@ -37,7 +37,8 @@ class CreateStaffCommandHandler
             $command->intro,
             $command->description,
             $command->website,
-            $command->type_id
+            $command->type_id,
+            $command->page_id
         );
 
 

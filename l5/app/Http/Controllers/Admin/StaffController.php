@@ -31,8 +31,9 @@ class StaffController extends Controller
     public function create(StaffRepo $repo)
     {
         $types = $repo->types();
+        $pageTypes = $repo->pageTypes();
 
-        return view('admin.staff.create', compact('types'));
+        return view('admin.staff.create', compact('types', 'pageTypes'));
     }
 
     /**
@@ -63,8 +64,11 @@ class StaffController extends Controller
         $staff = $repo->getById($id);
 
         $types = $repo->types();
+        
+        $pageTypes = $repo->pageTypes();
 
-        return view('admin.staff.edit', compact('staff', 'types'));
+
+        return view('admin.staff.edit', compact('staff', 'types', 'pageTypes'));
     }
 
     /**

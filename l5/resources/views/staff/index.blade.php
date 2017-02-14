@@ -10,14 +10,14 @@
 
                 <?php $total_types = count($all_staff); $i=1; ?>
 
-                @foreach($all_staff as $type)
+                @foreach($all_staff as $name => $data)
 
-                <h1>{{$type->name}}</h1>
+                <h1>{{$name}}</h1>
 
                     <div class="row fivecolumns">
                     
 
-                    @foreach($type->staff as $staff)
+                    @foreach($data as $staff)
                           
 
                     <div class="col-md-2 col-sm-2 col-lg-2">

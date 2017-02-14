@@ -13,7 +13,10 @@
                     <a href="/admin/pagine"><i class="fa fa-file-text-o"></i></i>&nbsp;&nbsp;&nbsp;Pagine</a>
                 </li>
                 <li>
-                    <a href="/admin/staff"><i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;Staff</a>
+                    <a href="/admin/staff"><i class="fa fa-sitemap"></i>&nbsp;&nbsp;&nbsp;Network</a>
+                </li>
+                <li>
+                    <a href="/admin/titoli"><i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;Titoli</a>
                 </li>
                 <li>
                     <a href="/admin/testi"><i class="fa fa-text-width"></i>&nbsp;&nbsp;&nbsp;Testi Home</a>

@@ -9,9 +9,9 @@
 
 @section('content')
 
-@include('admin.layouts.title-and-toggle', array('title' => 'Lista Profili Staff'))
+@include('admin.layouts.title-and-toggle', array('title' => 'Lista Profili Network'))
 
-<p>In questa sezione si possono vedere i 'Profili Staff' presenti sul sito ed inserirne nuovi</p>
+<p>In questa sezione si possono vedere i 'Profili Network' presenti sul sito ed inserirne nuovi</p>
 @include('admin.layouts.errors')
 @include('flash::message')
 <div class="panel panel-default">
@@ -31,6 +31,7 @@
                     <td>&nbsp;</td>
                     <td>Nome</td>
                     <td>Intro</td>
+                    <td>Pagina</td>
                 </thead>
                 <tbody class="sortable" data-entityname="staff">
                     @foreach($staff as $item)
@@ -41,6 +42,7 @@
                         <td><a href="/admin/staff/{{$item['id']}}/modifica"><img class="img-responsive" style="width:40px" src="{{$item->present()->featuredImageUrl()}}" alt=""></a></td>
                         <td><a href="/admin/staff/{{$item['id']}}/modifica">{{$item['name']}}</a></td>
                         <td>{{$item['intro']}}</td>
+                        <td>{{$item['pageType']['name']}}</td>
                     </tr>
                     @endforeach
                 </tbody>

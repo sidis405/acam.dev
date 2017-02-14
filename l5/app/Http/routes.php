@@ -18,7 +18,10 @@ Route::get('/attivita', 'HomeController@index');
 Route::get('/attivita/{slug}', 'ActivitiesController@show');
 
 
-Route::get('/network', 'StaffController@index');
+// Route::get('/network', 'StaffController@index');
+Route::get('network/professionisti', 'StaffController@professionisti');
+Route::get('network/studi-societa', 'StaffController@studi_societa');
+Route::get('network/imprese', 'StaffController@imprese');
 
 Route::get('loadMoreActivities', 'HomeController@loadMoreActivities');
 
@@ -31,6 +34,11 @@ Route::group(array('prefix' => 'admin', 'middleware' => 'auth'), function () {
 
     Route::post('model/upload_attachment', 'Admin\AttachmentsController@store');
     Route::post('model/{id}/delete', 'Admin\AttachmentsController@delete');
+
+    
+
+    Route::get('titoli', 'Admin\StaffTypesController@edit');
+    Route::post('titoli', 'Admin\StaffTypesController@update');
 
 
     Route::get('/', function(){

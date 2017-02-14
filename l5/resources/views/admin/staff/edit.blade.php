@@ -17,7 +17,7 @@
 
 @include('admin.layouts.title-and-toggle', array('title' => 'Modifica Profilo Staff'))
 
-<p>In questa sezione puoi creare una nuova 'Profilo Staff'</p>
+<p>In questa sezione puoi creare una nuova 'Profilo Network'</p>
 @include('admin.layouts.errors')
 @include('flash::message')
 <div class="panel panel-default">
@@ -65,6 +65,15 @@
                 </div>
                 <div class="form-group">
                  
+                        <label>Pagina Network</label>
+                        <select name="page_id">
+                            @foreach($pageTypes as $pageType)
+                            <option value="{{$pageType['id']}}" @if($pageType->id == $staff->page_id) selected @endif>{{$pageType['name']}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                <div class="form-group">
+                 
                         <label>Tipo</label>
                         <select name="type_id">
                             @foreach($types as $type)
@@ -72,6 +81,7 @@
                             @endforeach
                         </select>
                     </div>
+
                 <div class="form-group">
                     <label>Intro</label>
                     <textarea class="form-control" name="intro" rows="5" placeholder="Intro" required>{{old('intro', $staff->intro)}}</textarea>

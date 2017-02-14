@@ -27,6 +27,8 @@ class CreateStaffRequest extends Request
             'name' => 'required',
             'intro' => 'required',
             'description' => 'required',
+            'type_id' => 'required',
+            'page_id' => 'required',
         ];
     }
 
@@ -36,6 +38,8 @@ class CreateStaffRequest extends Request
             'name.required' => 'Il campo nome è obbligatorio',
             'intro.required' => 'Il campo intro è obbligatorio',
             'description.required' => 'Il campo descrizione è obbligatorio',
+            'description.type_id' => 'Il campo Tipo è obbligatorio',
+            'description.page_id' => 'Il campo Pagina network è obbligatorio',
         ];
     }
 }

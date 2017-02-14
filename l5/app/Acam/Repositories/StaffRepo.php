@@ -2,9 +2,10 @@
 
 namespace Acam\Repositories;
 
-use Acam\Models\FeaturedImage;
 use Acam\Models\Staff;
 use Acam\Models\StaffTypes;
+use Acam\Models\FeaturedImage;
+use Acam\Models\StaffPageTypes;
 
 /**
 * Staff Repo
@@ -21,6 +22,11 @@ class StaffRepo
     public function types()
     {
         return StaffTypes::all();
+    }
+
+    public function pageTypes()
+    {
+        return StaffPageTypes::all();
     }
 
     public function remove($id)
@@ -41,15 +47,20 @@ class StaffRepo
 
     public function getAllByType()
     {
-        return StaffTypes::with('staff.featuredImage')->get();
+        return StaffTypes::with('staff.featuredImage', 'staff')->get();
+    }
+
+    public function getAllByPage($page_id)
+    {
+        return StaffPageTypes::whereId($page_id)->with('staff.featuredImage', 'staff.type')->first();
     }
 
     public function getAll($howMany = null)
     {
         if ($howMany) {
-            return Staff::with('media', 'featuredImage')->orderBy('position', 'ASC')->simplePaginate($howMany);
+            return Staff::with('media', 'featuredImage', 'pageType')->orderBy('position', 'ASC')->simplePaginate($howMany);
         } else {
-            return Staff::with('media', 'featuredImage')->orderBy('position', 'ASC')->get();
+            return Staff::with('media', 'featuredImage', 'pageType')->orderBy('position', 'ASC')->get();
         }
     }
 

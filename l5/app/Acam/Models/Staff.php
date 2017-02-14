@@ -23,25 +23,35 @@ class Staff extends Model implements HasMedia
         return $this->belongsTo('Acam\Models\FeaturedImage', 'featured_image_id');
     }
 
-    public static function make($name, $intro, $description, $website, $type_id)
+    public function pageType()
+    {
+        return $this->belongsTo('Acam\Models\StaffPageTypes', 'page_id');
+    }
+
+    public function type()
+    {
+        return $this->belongsTo('Acam\Models\StaffTypes', 'type_id');
+    }
+
+    public static function make($name, $intro, $description, $website, $type_id, $page_id)
     {   
-        if(strpos($website, 'http:') < 0) {
-            $website = 'http://' . $website;
-        }
+        // if(strpos($website, 'http:') < 0) {
+        //     $website = 'http://' . $website;
+        // }
         
-        $staff = new static(compact('name', 'intro', 'description', 'website', 'type_id'));
+        $staff = new static(compact('name', 'intro', 'description', 'website', 'type_id', 'page_id'));
 
         return $staff;
     }
 
-    public static function edit($staff_id, $name, $intro, $description, $featured_image_id, $website, $type_id)
+    public static function edit($staff_id, $name, $intro, $description, $featured_image_id, $website, $type_id, $page_id)
     {
         $staff = static::find($staff_id);
 
 
-        if(! (strpos($website, 'http:') < 0)) {
-            $website = 'http://' . $website;
-        }
+        // if( (strpos($website, 'http:') < 0)) {
+        //     $website = 'http://' . $website;
+        // }
 
         // logger(!(strpos($website, 'http:') < 0));
 
@@ -51,6 +61,7 @@ class Staff extends Model implements HasMedia
         $staff->featured_image_id    = $featured_image_id;
         $staff->website               = $website;
         $staff->type_id              = $type_id;
+        $staff->page_id              = $page_id;
     
         return $staff;
     }

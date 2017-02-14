@@ -38,7 +38,8 @@ class UpdateStaffCommandHandler
             $command->description,
             $command->featured_image_id,
             $command->website,
-            $command->type_id
+            $command->type_id,
+            $command->page_id
         );
 
         $staff = $this->repo->save($staff_object);

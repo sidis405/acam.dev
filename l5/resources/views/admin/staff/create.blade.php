@@ -13,7 +13,7 @@
 
 @include('admin.layouts.title-and-toggle', array('title' => 'Inserisci Profilo Staff'))
 
-<p>In questa sezione puoi creare un nuovo 'Profilo Staff'</p>
+<p>In questa sezione puoi creare un nuovo 'Profilo Network'</p>
 @include('admin.layouts.errors')
 @include('flash::message')
 
@@ -41,6 +41,16 @@
                     <label>Website</label>
                     <input class="form-control" name="website" placeholder="Website" value="{{old('website')}}" >
                 </div>
+
+                <div class="form-group">
+                 
+                        <label>Pagina Network</label>
+                        <select name="page_id">
+                            @foreach($pageTypes as $pageType)
+                            <option value="{{$pageType['id']}}">{{$pageType['name']}}</option>
+                            @endforeach
+                        </select>
+                    </div>
 
                  <div class="form-group">
                  

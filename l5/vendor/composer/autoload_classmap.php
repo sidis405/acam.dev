@@ -14,6 +14,7 @@ return array(
     'CreatePagesTable' => $baseDir . '/database/migrations/2015_10_12_174312_create_pages_table.php',
     'CreatePagesTextsTable' => $baseDir . '/database/migrations/2015_10_12_160338_create_pages_texts_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreateStaffPageTypesTable' => $baseDir . '/database/migrations/2017_02_14_111836_create_staff_page_types_table.php',
     'CreateStaffTable' => $baseDir . '/database/migrations/2015_10_12_160352_create_staff_table.php',
     'CreateStaffTypesTable' => $baseDir . '/database/migrations/2015_10_12_164348_create_staff_types_table.php',
     'CreateTableAttachments' => $baseDir . '/database/migrations/2015_04_29_130846_create_table_attachments.php',
