@@ -33,17 +33,19 @@ $( window ).load(function() {
 
 // Masonry init lol
 $( window ).load(function() {
-    doMasonry();
+    // doMasonry();
+    $('#activities-container').layout();
+
 });
 
-function doMasonry() {
-  var container = document.querySelector('#masonry-container');
-    var msnry = new Masonry( container, {
-      // options
-      itemSelector: '.masonry_item',
+// function doMasonry() {
+//   var container = document.querySelector('#masonry-container');
+//     var msnry = new Masonry( container, {
+//       // options
+//       itemSelector: '.masonry_item',
       
-    });
-}
+//     });
+// }
 
 
 $(document).ready(function() {
@@ -142,10 +144,16 @@ function getActivities (url) {
         success: function(data) {
 
             var $layout = $(data.layout);
-            $('#masonry-container').append( $layout )
-            $('#masonry-container').masonry( 'appended', $layout );
+
+            // console.log($layout);
+
+            $('#activities-container').layout('end');
+            $('#activities-container').append( $layout );
+            $('#activities-container').layout();
+            // $(document).find('#activities-container').layout('reload');
+            // $('#masonry-container').masonry( 'appended', $layout );
             setTimeout(function(){
-              doMasonry();
+              // doMasonry();
             }, 100)
 
 

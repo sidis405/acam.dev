@@ -1,4 +1,4 @@
 <br>
-                    <div class="row activities-container">
+                    <div class="row" id="activities-container">
                     @include('home.partials.activities-partial')
                     </div>

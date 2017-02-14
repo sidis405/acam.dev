@@ -26,6 +26,27 @@
         <!-- Google Font -->
         <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300' rel='stylesheet' type='text/css'>
 
+        <style>
+            .single-column .b-by-b-item {
+              width: 100%!important;
+            }
+            @media (min-width: 0px) and (max-width: 480px) {
+              #activities-container .b-by-b-item {
+                width: 100%;
+              }
+            }
+            @media (min-width: 481px) and (max-width: 1024px) {
+              #activities-container .b-by-b-item {
+                width: 50%;
+              }
+            }
+            @media (min-width: 1025px) {
+              #activities-container .b-by-b-item {
+                width: 33.33%;
+              }
+            }
+        </style>
+
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -59,9 +80,11 @@
         <script src="/js/vendor/jquery.magnific-popup.min.js"></script>
         <script src="/js/jquery.cookiebar.js"></script>
         <script src="/js/main.js"></script>
+        <script src="/js/vendor/brick-by-brick.min.js"></script>
 
         <script>
                         
+
                             if(jQuery.cookieBar('cookies')){
                               !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
                             }

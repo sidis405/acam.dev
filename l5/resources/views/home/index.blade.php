@@ -15,7 +15,7 @@
                     <p>Servizi a 360° per non farti perdere la bussola.</p> -->
                 </div>
 
-                <div class="home-portfolio" id="masonry-container">
+                <div class="home-portfolio" id="brick-container">
                     
                     @include('home.partials.activities')
                 </div>
