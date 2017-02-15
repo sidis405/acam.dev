@@ -13,11 +13,8 @@
                 @endforeach
             </ul>
         </li>
-        <li><a href="/#portfolio" class="scroller">Portfolio</a></li>
-        {{-- <li @if(\Session::get('current_page') =='network') class="current" @endif><a href="/network">Network</a></li> --}}
-
         <li class="dropdown
-            @if(in_array(\Session::get('current_page') , array_pluck($types, 'slug'))) current @endif ">
+            @if(\Session::get('current_page') == 'network') current @endif ">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Network <span class="caret"></span></a>
             <ul class="dropdown-menu">
                 @foreach($pageTypes as $pageType)
@@ -26,6 +23,9 @@
             </ul>
         </li>
         
+        <li><a href="/#portfolio" class="scroller">Portfolio</a></li>
+
+
         <li><a class="scrollto scrollContact" href="#footer-contact">Contatti</a></li>
     </ul>
     <!-- Brand and toggle get grouped for better mobile display -->

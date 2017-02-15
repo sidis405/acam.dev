@@ -642,5 +642,11 @@ span.load-more-section {
   text-transform: none;
 }
 
+.page p, .page ul {
+  font-size: 13px !important;
+}
 
+.page h1, .page h2, .page h3, .page h4 {
+  font-family: 'Yanone Kaffeesatz';
+}
 
