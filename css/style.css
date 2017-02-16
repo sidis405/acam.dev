@@ -642,6 +642,11 @@ span.load-more-section {
   text-transform: none;
 }
 
+.page ul, .page ol {
+  padding: 0 !important;
+  list-style: none !important;
+}
+
 .page p, .page ul {
   font-size: 13px !important;
 }
