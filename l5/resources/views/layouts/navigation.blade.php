@@ -42,12 +42,15 @@
         <ul class="navigation-mobile">
             <li class="current"><a href="/">Acam</a></li>
             <li><a href="/mission">Chi siamo</a></li>
-            <li><a href="#">Servizi</a></li>
+            <li><a href="#" style="border: 0;"><b>Servizi</b></a></li>
             @foreach($types as $type)
-            <li><a href="{{$type->slug}}"><span class="{{$type->class}}-label">{{$type->type}}</span></a></li>
+            <li><a style="border: 0;" href="/{{$type->slug}}"><span class="{{$type->class}}-label">{{$type->type}}</span></a></li>
             @endforeach
-            <li><a href="/#portfolio" class="scroller">Portfolio</a></li>
-            <li><a href="/network">Network</a></li>
+            <li><a href="#" style="border: 0; border-top: 1px solid #ebebeb"><b>Network</b></a></li>
+            @foreach($pageTypes as $pageType)
+            <li><a style="border: 0;" href="{{$pageType->slug}}"><span>{{$pageType->name}}</span></a></li>
+            @endforeach
+            <li><a style="border-top: 1px solid #ebebeb" href="/#portfolio" class="scroller">Portfolio</a></li>
             
             
             <li><a class="scrollto" href="#footer-contact">Contatti</a></li>
