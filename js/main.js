@@ -73,10 +73,10 @@ $(document).ready(function() {
 
 $(document).ready(function(){
   $.cookieBar({
-    message: "ACAM utilizza cookies di terze parti. Continuando la navigazione ne accetti l'utilizzo. ",
-    policyButton: true,
-    policyText: 'Maggiori informazioni',
-    policyURL: 'policy',
+    message: "Il sito utilizza cookie di terze parti profilanti e analitici. Cliccando su OK l'utente accetta l’installazione dei cookie. Per maggiori informazioni, anche in ordine alla disattivazione, è possibile consultare l’<a style='margin:0; padding:0' class='cookie-link-2' href='cookie'>Informativa sui Cookie</a>.",
+    // policyButton: true,
+    // policyText: 'Maggiori informazioni',
+    // policyURL: 'policy',
     acceptText: 'Ok',
     fixed: true,
     bottom: true  

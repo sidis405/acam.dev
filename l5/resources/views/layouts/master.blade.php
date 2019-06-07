@@ -20,7 +20,8 @@
         <!-- Responsive Styling -->
         <link rel="stylesheet" href="/css/responsive.css">
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="/css/font-awesome.css">
+        <!-- <link rel="stylesheet" href="/css/font-awesome.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Modernizr -->
         <script src="/js/vendor/modernizr-2.7.1.min.js"></script>
         <!-- Google Font -->
@@ -46,6 +47,17 @@
               }
             }
         </style>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106080004-16"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-106080004-16', { 'anonymize_ip': true });
+      </script>
+
 
     </head>
     <body>

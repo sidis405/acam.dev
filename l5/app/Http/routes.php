@@ -11,6 +11,7 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::get('/', 'HomeController@index');
 Route::get('policy', 'HomeController@policy');
+Route::get('cookie', 'HomeController@cookie');
 Route::get('pull', 'HomeController@pull');
 Route::get('/home', 'HomeController@index');
 Route::get('loadMoreActivities', 'HomeController@loadMoreActivities');

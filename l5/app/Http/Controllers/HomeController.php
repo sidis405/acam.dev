@@ -43,6 +43,10 @@ class HomeController extends Controller
     {
         return view('home.privacy');
     }
+    public function cookie()
+    {
+        return view('home.cookie');
+    }
 
     public function pull()
     {

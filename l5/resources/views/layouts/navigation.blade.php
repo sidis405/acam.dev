@@ -2,31 +2,39 @@
     <!-- <a href="http://areatecnica.acamprovides.com"><h1 id="logo-areea">Areea</h1></a> -->
     <a href="/"><h1 id="logo">ACAM</h1></a>
     <ul class="navigation">
-        <li @if(\Session::get('current_page') =='home') class="current" @endif><a href="/">Acam</a></li>
-        <li @if(\Session::get('current_page') =='mission') class="current" @endif><a href="/mission">Chi Siamo</a></li>
+        <li @if(\Session::get('current_page') =='home') class="current" @endif><a href="/">Home</a></li>
+        <li @if(\Session::get('current_page') =='mission') class="current" @endif><a href="/mission"><span style="text-transform: lowercase;">Chi</span> Siamo</a></li>
         <li class="dropdown
-            @if(in_array(\Session::get('current_page') , array_pluck($types, 'slug'))) current @endif ">
+            @if(in_array(\Session::get('current_page') , array_pluck($types ?? [], 'slug'))) current @endif ">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Servizi <span class="caret"></span></a>
             <ul class="dropdown-menu">
-                @foreach($types as $type)
+                @foreach($types ?? [] as $type)
                 <li><a href="/{{$type->slug}}"><span class="{{$type->class}}-label">{{$type->type}}</span></a></li>
                 @endforeach
             </ul>
         </li>
         <li class="dropdown
             @if(\Session::get('current_page') == 'network') current @endif ">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Network <span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Rete <span class="caret"></span></a>
             <ul class="dropdown-menu">
-                @foreach($pageTypes as $pageType)
+                @foreach($pageTypes ?? [] as $pageType)
                 <li><a href="{{$pageType->slug}}"><span>{{$pageType->name}}</span></a></li>
                 @endforeach
             </ul>
         </li>
-        
-        <li><a href="/#portfolio" class="scroller">Portfolio</a></li>
-
-
+        <!-- <li><a href="/#portfolio" class="scroller">Portfolio</a></li> -->
+        {{-- <li>
+            <a href="https://www.instagram.com/acam_studio/" target="_blank" style="font-style: italic; position: relative;">
+                <span style="font-size: 2.8rem; position: absolute; top:8px; left: 0;">#</span>
+                acamstudio
+            </a>
+        </li> --}}
         <li><a class="scrollto scrollContact" href="#footer-contact">Contatti</a></li>
+        <li>
+            <a href="https://www.instagram.com/acam_studio/" target="_blank" style="font-style: italic; position: relative;">
+                <i class="fa fa-instagram"></i>
+            </a>
+        </li>
     </ul>
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -40,19 +48,20 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="navigation-mobile">
-            <li class="current"><a href="/">Acam</a></li>
+            <!-- <li class="current"><a href="/">Acam</a></li> -->
             <li><a href="/mission">Chi siamo</a></li>
             <li><a href="#" style="border: 0;"><b>Servizi</b></a></li>
-            @foreach($types as $type)
+            @foreach($types ?? [] as $type)
             <li><a style="border: 0;" href="/{{$type->slug}}"><span class="{{$type->class}}-label">{{$type->type}}</span></a></li>
             @endforeach
-            <li><a href="#" style="border: 0; border-top: 1px solid #ebebeb"><b>Network</b></a></li>
-            @foreach($pageTypes as $pageType)
+            <li><a href="#" style="border: 0; border-top: 1px solid #ebebeb"><b>Rete</b></a></li>
+            @foreach($pageTypes ?? [] as $pageType)
             <li><a style="border: 0;" href="{{$pageType->slug}}"><span>{{$pageType->name}}</span></a></li>
             @endforeach
-            <li><a style="border-top: 1px solid #ebebeb" href="/#portfolio" class="scroller">Portfolio</a></li>
-            
-            
+            <!-- <li><a style="border-top: 1px solid #ebebeb" href="/#portfolio" class="scroller">Portfolio</a></li> -->
+            <li><a style="border-top: 1px solid #ebebeb" href="https://www.instagram.com/acam_studio/" target="_blank">#acamstudio</a></li>
+
+
             <li><a class="scrollto" href="#footer-contact">Contatti</a></li>
         </ul>
     </div>
