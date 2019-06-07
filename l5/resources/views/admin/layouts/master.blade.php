@@ -11,8 +11,8 @@
 
     <title>ACAM Admin</title>
 
-    <!-- Favicons -->     
- 
+    <!-- Favicons -->
+
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
     <link href="/css/simple-sidebar.css" rel="stylesheet">
     <link href="/css/admin.css" rel="stylesheet">
 
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     @yield('header_scripts')
 
@@ -44,7 +44,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                    
+
                         @yield('content')
                     </div>
                 </div>
@@ -60,7 +60,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/js/bootstrap.min.js"></script>
-    
+
     <script src="/js/admin.js"></script>
 
     <!-- Menu Toggle Script -->
