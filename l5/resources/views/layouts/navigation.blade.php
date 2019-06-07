@@ -56,15 +56,14 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="navigation-mobile">
             <!-- <li class="current"><a href="/">Acam</a></li> -->
-            <li><a href="/mission">Chi siamo</a></li>
-            <li><a href="#" style="border: 0;"><b>Servizi</b></a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/mission"><span style="text-transform: lowercase;">Chi</span> Siamo</a></li>
+            <li><a href="/rete"><span style="text-transform: lowercase;">la</span> Rete</a></li>
+            <li><a href="#" style="border: 0;"><b><span style="text-transform: lowercase;">i</span> Servizi</b></a></li>
             @foreach($types ?? [] as $type)
             <li><a style="border: 0;" href="/{{$type->slug}}"><span class="{{$type->class}}-label">{{$type->type}}</span></a></li>
             @endforeach
-            <li><a href="#" style="border: 0; border-top: 1px solid #ebebeb"><b>Rete</b></a></li>
-            @foreach($pageTypes ?? [] as $pageType)
-            <li><a style="border: 0;" href="{{$pageType->slug}}"><span>{{$pageType->name}}</span></a></li>
-            @endforeach
+            <li><a href="/beni" style="border-top: 1px solid #ebebeb" ><span style="text-transform: lowercase;">i</span> Beni</a></li>
             <!-- <li><a style="border-top: 1px solid #ebebeb" href="/#portfolio" class="scroller">Portfolio</a></li> -->
             <li><a style="border-top: 1px solid #ebebeb" href="https://www.instagram.com/acam_studio/" target="_blank">#acamstudio</a></li>
 

@@ -28,6 +28,10 @@
         <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300' rel='stylesheet' type='text/css'>
 
         <style>
+            #instagram--feed img {
+                width: 16.66%;
+                float: left;
+            }
             .single-column .b-by-b-item {
               width: 100%!important;
             }
@@ -90,6 +94,7 @@
         <script src="/js/vendor/masonry.min.js"></script>
         <script src="/js/plugins.js"></script>
         <script src="/js/vendor/jquery.magnific-popup.min.js"></script>
+        <script src="/js/jquery.instagramFeed.min.js"></script>
         <script src="/js/jquery.cookiebar.js"></script>
         <script src="/js/main.js"></script>
         <script src="/js/vendor/brick-by-brick.min.js"></script>

@@ -1,13 +1,26 @@
+<div class="container" style="height: 260px; margin-bottom: -.5rem; border-bottom: 0; padding: 1rem 0;">
+    <div id="instagram--feed" style="height: 200px;"></div>
+</div>
+<div style="clear: both;"></div>
 <div class="container" id="footer-contact" style="padding-bottom: 0;">
     <div class="row">
-        <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/a31cb1bec3a85d578641a3dde790b25f.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+        <!-- LightWidget WIDGET -->
+        {{-- <script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/a31cb1bec3a85d578641a3dde790b25f.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe> --}}
     </div>
     <div class="row">
         <div class="col-md-4">
             <p>
                 <ul  style="padding: 23px;" class="contact-info">
-                    <li><i class="fa fa-map-marker"></i><a target="_blank" href="https://www.google.it/maps/place/Via+Salaria,+96,+00198+Roma+RM/@41.9138329,12.4954645,17z/data=!3m1!4b1!4m5!3m4!1s0x132f610fa633d2e3:0x51bd7578b125ad4c!8m2!3d41.9138289!4d12.4976532?hl=it"> Via Salaria, 96<br>
-                    00198 Roma</a></li>                                
+                    <li>
+                        <i class="fa fa-map-marker"></i>
+                        <a target="_blank" href="https://www.google.it/maps/place/Via+Salaria,+96,+00198+Roma+RM/@41.9138329,12.4954645,17z/data=!3m1!4b1!4m5!3m4!1s0x132f610fa633d2e3:0x51bd7578b125ad4c!8m2!3d41.9138289!4d12.4976532?hl=it"> Via Salaria, 96 - 00198 Roma</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-map-marker"></i>
+                        <a href="https://www.google.com/maps/place/Piazza+San+Nazaro+in+Brolo,+20122+Milano+MI/@45.4582477,9.1903706,17z/data=!3m1!4b1!4m8!1m2!2m1!1spiazza+san+nazaro+in+brolo+15+milano!3m4!1s0x4786c6a81ae55731:0x30f984921f8775d8!8m2!3d45.4583011!4d9.1925255">
+                            Piazza San Nazaro in Brolo, 15 - 20122 Milano
+                        </a>
+                    </li>                                
                 </ul>
             </p>
         </div>
