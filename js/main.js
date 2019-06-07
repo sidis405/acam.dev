@@ -34,9 +34,25 @@ $( window ).load(function() {
 // Masonry init lol
 $( window ).load(function() {
     // doMasonry();
-    $('#activities-container').layout();
-
+    if($('#activities-container').length) {
+      $('#activities-container').layout();
+    }
+    $.instagramFeed({
+      // 'cors_proxy': "https://cors-anywhere.herokuapp.com/https://www.instagram.com/",
+      'username': 'acam_studio',
+      'container': "#instagram--feed",
+      'display_profile': false,
+      'display_biography': false,
+      'display_gallery': true,
+      'get_raw_json': false,
+      'callback': null,
+      'styling': false,
+      'items': 6,
+      'items_per_row': 6,
+      'margin': 1
+    });
 });
+
 
 // function doMasonry() {
 //   var container = document.querySelector('#masonry-container');

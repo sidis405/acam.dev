@@ -25,7 +25,7 @@
         <!-- Modernizr -->
         <script src="/js/vendor/modernizr-2.7.1.min.js"></script>
         <!-- Google Font -->
-        <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300' rel='stylesheet' type='text/css'>
 
         <style>
             #instagram--feed img {
@@ -88,7 +88,7 @@
         <!-- jQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-        
+
         <!-- Scripts -->
         <script src="/js/vendor/bootstrap.min.js"></script>
         <script src="/js/vendor/masonry.min.js"></script>
@@ -100,7 +100,7 @@
         <script src="/js/vendor/brick-by-brick.min.js"></script>
 
         <script>
-                        
+
 
                             if(jQuery.cookieBar('cookies')){
                               !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
