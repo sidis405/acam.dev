@@ -4,24 +4,29 @@
     <ul class="navigation">
         <li @if(\Session::get('current_page') =='home') class="current" @endif><a href="/">Home</a></li>
         <li @if(\Session::get('current_page') =='mission') class="current" @endif><a href="/mission"><span style="text-transform: lowercase;">Chi</span> Siamo</a></li>
+
+        <li @if(\Session::get('current_page') =='rete') class="current" @endif><a href="/rete"><span style="text-transform: lowercase;">la</span> Rete</a></li>
+      {{--   <li class="dropdown
+            @if(\Session::get('current_page') == 'network') current @endif ">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="text-transform: lowercase;">la</span> Rete <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                @foreach($pageTypes ?? [] as $pageType)
+                <li><a href="{{$pageType->slug}}"><span>{{$pageType->name}}</span></a></li>
+                @endforeach
+            </ul>
+        </li> --}}
         <li class="dropdown
             @if(in_array(\Session::get('current_page') , array_pluck($types ?? [], 'slug'))) current @endif ">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Servizi <span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="text-transform: lowercase;">i</span> Servizi <span class="caret"></span></a>
             <ul class="dropdown-menu">
                 @foreach($types ?? [] as $type)
                 <li><a href="/{{$type->slug}}"><span class="{{$type->class}}-label">{{$type->type}}</span></a></li>
                 @endforeach
             </ul>
         </li>
-        <li class="dropdown
-            @if(\Session::get('current_page') == 'network') current @endif ">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Rete <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                @foreach($pageTypes ?? [] as $pageType)
-                <li><a href="{{$pageType->slug}}"><span>{{$pageType->name}}</span></a></li>
-                @endforeach
-            </ul>
-        </li>
+
+        <li @if(\Session::get('current_page') =='beni') class="current" @endif><a href="/beni"><span style="text-transform: lowercase;">i</span> Beni</a></li>
+
         <!-- <li><a href="/#portfolio" class="scroller">Portfolio</a></li> -->
         {{-- <li>
             <a href="https://www.instagram.com/acam_studio/" target="_blank" style="font-style: italic; position: relative;">
@@ -44,6 +49,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         </button>
+
+
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
