@@ -3,7 +3,7 @@
     <a href="/"><h1 id="logo">ACAM</h1></a>
     <ul class="navigation">
         <li @if(\Session::get('current_page') =='home') class="current" @endif><a href="/">Home</a></li>
-        <li @if(\Session::get('current_page') =='mission') class="current" @endif><a href="/mission"><span style="text-transform: lowercase;">Chi</span> Siamo</a></li>
+        <li @if(\Session::get('current_page') =='mission') class="current" @endif><a href="/chi-siamo"><span style="text-transform: lowercase;">Chi</span> Siamo</a></li>
 
         <li @if(\Session::get('current_page') =='rete') class="current" @endif><a href="/rete"><span style="text-transform: lowercase;">la</span> Rete</a></li>
       {{--   <li class="dropdown
@@ -57,7 +57,7 @@
         <ul class="navigation-mobile">
             <!-- <li class="current"><a href="/">Acam</a></li> -->
             <li><a href="/">Home</a></li>
-            <li><a href="/mission"><span style="text-transform: lowercase;">Chi</span> Siamo</a></li>
+            <li><a href="/chi-siamo"><span style="text-transform: lowercase;">Chi</span> Siamo</a></li>
             <li><a href="/rete"><span style="text-transform: lowercase;">la</span> Rete</a></li>
             <li><a href="#" style="border: 0;"><b><span style="text-transform: lowercase;">i</span> Servizi</b></a></li>
             @foreach($types ?? [] as $type)

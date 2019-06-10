@@ -2,15 +2,15 @@
 
 namespace Acam\Models;
 
+use Rutorika\Sortable\SortableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Laracasts\Presenter\PresentableTrait;
-use Rutorika\Sortable\SortableTrait;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\Interfaces\HasMedia;
 
 class Pages extends Model implements HasMedia
 {
-    protected $fillable = ['name', 'slug', 'content', 'featured_image_id'];
+    protected $fillable = ['name', 'slug', 'content', 'featured_image_id', 'title'];
 
     use PresentableTrait, HasMediaTrait, SortableTrait;
 
@@ -22,8 +22,7 @@ class Pages extends Model implements HasMedia
     }
 
     public static function make($name, $slug, $content)
-    {   
-        
+    {
         $page = new static(compact('name', 'slug', 'content'));
 
         return $page;
@@ -37,7 +36,7 @@ class Pages extends Model implements HasMedia
         $page->slug                 = $slug;
         $page->content              = $content;
         $page->featured_image_id    = $featured_image_id;
-    
+
         return $page;
     }
 }
