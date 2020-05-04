@@ -1,5 +1,7 @@
 <div class="container" style="height: 260px; margin-bottom: -.5rem; border-bottom: 0; padding: 1rem 0;">
-    <div id="instagram--feed" style="height: 200px;"></div>
+    <!--<div id="instagram--feed" style="height: 200px;"></div>-->
+    <!-- LightWidget WIDGET -->
+    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/cf3b17db2c6457acb576213ed6884784.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
 </div>
 <div style="clear: both;"></div>
 <div class="container" id="footer-contact" style="padding-bottom: 0;">
@@ -48,6 +50,7 @@
 </div>
 
 <div class="container credits">
+    <a class="scrollto scrollContact" href="#header">Torna su <i class="fa fa-angle-up"></i></a>
     <p>Copyright © ACAM 2012-2016. All rights reserved / <a href="cookie">Cookie</a>. Webdesign by <a href="http://www.officine06.com" target="_blank">Officine06</a>.</p>
     <p>ACAM s.r.l. - via Salaria, 96 - 00198 Roma - Partita IVA / CF: 12702661005 - CCIAA: RM-12702661005 - REA: RM-1394196 - PEC: <a href="mailto:acamsrl@legalmail.it">acamsrl@legalmail.it</a></p>
 </div>

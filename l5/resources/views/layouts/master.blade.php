@@ -26,6 +26,7 @@
         <script src="/js/vendor/modernizr-2.7.1.min.js"></script>
         <!-- Google Font -->
         <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 
         <style>
             #instagram--feed img {
@@ -93,6 +94,7 @@
         <script src="/js/vendor/bootstrap.min.js"></script>
         <script src="/js/vendor/masonry.min.js"></script>
         <script src="/js/plugins.js"></script>
+        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
         <script src="/js/vendor/jquery.magnific-popup.min.js"></script>
         <script src="/js/jquery.instagramFeed.min.js"></script>
         <script src="/js/jquery.cookiebar.js"></script>

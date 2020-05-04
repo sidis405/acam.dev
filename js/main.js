@@ -1,18 +1,57 @@
 $(document).ready(function(){
-    if (location.hash) {
-      setTimeout(function() {
+  if (location.hash) {
+    setTimeout(function() {
+    window.scrollTo(0, 0);
+  }, 1);
 
-        window.scrollTo(0, 0);
-      }, 1);
-
-      var target = $(location.hash);
+    var target = $(location.hash);
       // console.log(target);
       if (target.length) {
-      var targetOffset = target.offset().top;
-      $('html,body').animate({scrollTop: targetOffset -0}, 800);
-      
+        var targetOffset = target.offset().top;
+        $('html,body').animate({scrollTop: targetOffset -0}, 800);
+
+      }
     }
-    }
+
+    var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    speed: 2000,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    // on: {
+    //   slideChange: function () {
+    //     console.log('change')
+    //   },
+    //   slideChangeTransitionStart: function () {
+    //     console.log('start change')
+    //     setTimeout(function() {
+    //       $('a.item').css('opacity', 1);
+    //     }, 1000);
+    //   },
+    //   slideChangeTransitionEnd: function () {
+    //     console.log('finish change')
+    //     setTimeout(function() {
+    //       $('a.item').css('opacity', 1);
+    //     }, 1000);
+    //   },
+    // }
+  })
 });
 
 // Smooth scroll to section top

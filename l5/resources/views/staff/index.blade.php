@@ -2,24 +2,18 @@
 @section('content')
     
 
-    <div class="container network">
+    <div class="container network page">
 
             {!!presentBreadcrumbs(['home'])!!}
-
-
 
                 <?php $total_types = count($all_staff); $i=1; ?>
 
                 @foreach($all_staff as $name => $data)
-
                 <h1>{{$name}}</h1>
-
                     <div class="row fivecolumns">
-                    
-
+                
                     @foreach($data as $staff)
                           
-
                     <div class="col-md-2 col-sm-2 col-lg-2">
                         <img class="img-responsive" src="{{$staff->present()->featuredImageUrl()}}" alt="">   
                         <h4>{{$staff->name}}</h4>

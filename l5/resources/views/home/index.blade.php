@@ -2,12 +2,12 @@
 
 @section('content')
 
+@include('home.partials.carousel')
 <div class="container">
 
 <br>
 <br>
                 
-                @include('home.partials.carousel')
                 
                 <div class="shoutouts" id="portfolio">
                     {!! $texts['testo_1']['value'] !!}

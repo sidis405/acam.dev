@@ -1,33 +1,22 @@
-<div id="carousel" class="carousel slide" data-ride="carousel">
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    {!! carouselIndicators($featured) !!}
-                  </ol>
+<!-- Slider main container -->
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <?php $first = true; ?>
+        @foreach ($featured as $item) 
+        <div class="swiper-slide">
+          <a href="#{{$item->slug}}" class="item scrollto <?php if ($first) { echo 'active'; } $first=false; ?>" style="background: url({{$item->present()->slideImageUrl()}}) no-repeat center center;">
 
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner">      
-  
-                  <?php $first = true; ?>
-                       
-                       @foreach ($featured as $item) 
+          </a>
+        </div>
 
+        @endforeach  
+    </div>
+    <!-- If we need pagination -->
+    <!--<div class="swiper-pagination"></div>-->
 
-                      <a href="#{{$item->slug}}" class="item scrollto <?php if ($first) { echo 'active'; } $first=false; ?>" style="background: url({{$item->present()->slideImageUrl()}}) no-repeat center center;">
-
-                      </a>  
-
-
-                  @endforeach  
-
-
-
-                  </div>
-
-                  <!-- Controls -->
-                  <a class="left carousel-control" href="#carousel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                  </a>
-                  <a class="right carousel-control" href="#carousel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                  </a>
-                </div>
+    <!-- If we need navigation buttons -->
+    <!--<div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>-->
+</div>
