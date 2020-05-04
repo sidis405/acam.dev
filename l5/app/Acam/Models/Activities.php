@@ -2,6 +2,7 @@
 
 namespace App\Acam\Models;
 
+use Rutorika\Sortable\SortableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Laracasts\Presenter\PresentableTrait;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
@@ -11,7 +12,7 @@ class Activities extends Model implements HasMedia
 {
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
-    use PresentableTrait, HasMediaTrait;
+    use PresentableTrait, HasMediaTrait, SortableTrait;
 
     protected $presenter = 'Acam\Presenters\ActivityPresenter';
 
@@ -40,33 +41,33 @@ class Activities extends Model implements HasMedia
         return $this->belongsTo('Acam\Models\FeaturedImage', 'cover_image_id');
     }
 
-    public static function make($title, $slug, $subtitle, $description, $featured)
+    public static function make($title, $slug, $subtitle, $description, $featured, $position)
     {
-        $activity = new static(compact('title', 'slug', 'subtitle', 'description', 'featured'));
+        $activity = new static(compact('title', 'slug', 'subtitle', 'description', 'featured', 'position'));
 
         return $activity;
     }
 
     public static function edit(
-        $activity_id, 
+        $activity_id,
         $title, $slug, $subtitle, $description, $featured, $status_id, $type_id, $featured_image_id, $cover_image_id)
     {
- 
+
         // if ($featured == 'OFF') {
         //     $featured_image_id = null;
         // }
 
         $activity = static::find($activity_id);
 
-        $activity->title                = $title;
-        $activity->slug                 = $slug;
-        $activity->subtitle             = $subtitle;
-        $activity->description          = $description;
-        $activity->status_id            = $status_id;
-        $activity->type_id              = $type_id;
-        $activity->featured_image_id    = $featured_image_id;
-        $activity->cover_image_id       = $cover_image_id;
-        $activity->featured             = $featured;
+        $activity->title = $title;
+        $activity->slug = $slug;
+        $activity->subtitle = $subtitle;
+        $activity->description = $description;
+        $activity->status_id = $status_id;
+        $activity->type_id = $type_id;
+        $activity->featured_image_id = $featured_image_id;
+        $activity->cover_image_id = $cover_image_id;
+        $activity->featured = $featured;
 
         return $activity;
     }

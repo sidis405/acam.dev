@@ -8,8 +8,8 @@ use Acam\Models\ActivitiesTypes;
 use Acam\Models\FeaturedImage;
 
 /**
-* Activities Repo
-*/
+ * Activities Repo
+ */
 class ActivitiesRepo
 {
     public function save(Activities $activity)
@@ -35,7 +35,6 @@ class ActivitiesRepo
         return true;
     }
 
-
     public function statuses()
     {
         return ActivitiesStatus::all();
@@ -43,7 +42,7 @@ class ActivitiesRepo
 
     public function types($in_menu = false)
     {
-        if($in_menu){
+        if ($in_menu) {
             return ActivitiesTypes::where('in_menu', 1)->get();
         }
 
@@ -58,19 +57,19 @@ class ActivitiesRepo
     public function getAll($howMany = null)
     {
         if ($howMany) {
-            return Activities::with('type', 'media', 'status', 'featuredImage', 'coverImage')->latest()->simplePaginate($howMany);
-        } else {
-            return Activities::with('type', 'media', 'status', 'featuredImage', 'coverImage')->latest()->get();
+            return Activities::with('type', 'media', 'status', 'featuredImage', 'coverImage')->orderBy('position', 'ASC')->simplePaginate($howMany);
         }
+
+        return Activities::with('type', 'media', 'status', 'featuredImage', 'coverImage')->orderBy('position', 'ASC')->get();
     }
 
     public function getAllFront($howMany = null)
     {
         if ($howMany) {
-            return Activities::with('type', 'media', 'status', 'featuredImage', 'coverImage')->where('featured_image_id', '>', 0)->latest()->simplePaginate($howMany);
-        } else {
-            return Activities::with('type', 'media', 'status', 'featuredImage', 'coverImage')->where('featured_image_id', '>', 0)->latest()->get();
+            return Activities::with('type', 'media', 'status', 'featuredImage', 'coverImage')->where('featured_image_id', '>', 0)->orderBy('position', 'DESC')->simplePaginate($howMany);
         }
+
+        return Activities::with('type', 'media', 'status', 'featuredImage', 'coverImage')->where('featured_image_id', '>', 0)->orderBy('position', 'DESC')->get();
     }
 
     public function getBySlug($slug)
@@ -86,7 +85,7 @@ class ActivitiesRepo
     public function getMediaForId($id)
     {
         $activity = $this->getById($id);
-        
+
         return $activity->getMedia();
     }
 }

@@ -24,7 +24,7 @@
                 @endforeach
             </ul>
         </li>
-        <li @if(\Session::get('current_page') =='rete') class="current" @endif><a href="/rete">PEOPLE</a></li>
+        <li @if(\Session::get('current_page') =='people') class="current" @endif><a href="/people">PEOPLE</a></li>
         <li><a class="scrollto scrollContact" href="#footer-contact">CONTACT US</a></li>
         <li>
             <a href="https://www.instagram.com/acam_studio/" target="_blank" style="font-style: italic; position: relative;">
@@ -52,7 +52,7 @@
             @foreach($types ?? [] as $type)
                 <li><a style="border: 0;" href="/{{$type->slug}}"><span class="{{$type->class}}-label">{{$type->type}}</span></a></li>
             @endforeach
-            <li><a style="border-top: 1px solid #ebebeb" href="/rete"><b>PEOPLE</b></a></li>
+            <li><a style="border-top: 1px solid #ebebeb" href="/people"><b>PEOPLE</b></a></li>
             <li><a class="scrollto" href="#footer-contact"><b>CONTACT US</b></a></li>
             <li><a href="https://www.instagram.com/acam_studio/" target="_blank"><b>#acamstudio</b></a></li>
         </ul>

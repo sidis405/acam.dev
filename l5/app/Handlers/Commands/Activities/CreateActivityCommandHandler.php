@@ -10,8 +10,6 @@ use Acam\Repositories\ActivitiesRepo;
 use Event;
 use App\Events\Activities\ActivityWasCreated;
 
-use Illuminate\Queue\InteractsWithQueue;
-
 class CreateActivityCommandHandler
 {
     public $repo;
@@ -34,15 +32,15 @@ class CreateActivityCommandHandler
      */
     public function handle(CreateActivityCommand $command)
     {
+        $position = Activities::max('position') + 1;
         $activity_object = Activities::make(
             $command->title,
             str_slug($command->title, '-'),
             $command->subtitle,
             $command->description,
-            strtoupper($command->featured)
+            strtoupper($command->featured),
+            $position
         );
-
-        
 
         $activity = $this->repo->save($activity_object);
 

@@ -33,9 +33,11 @@ class SortableController extends Controller
                 switch ($request->input('type')) {
                     case 'moveAfter':
                         $entity->moveAfter($postionEntity);
+
                         break;
                     case 'moveBefore':
                         $entity->moveBefore($postionEntity);
+
                         break;
                 }
             } else {
@@ -47,9 +49,11 @@ class SortableController extends Controller
                 switch ($request->input('type')) {
                     case 'moveAfter':
                         $parentEntity->$relation()->moveAfter($entity, $postionEntity);
+
                         break;
                     case 'moveBefore':
                         $parentEntity->$relation()->moveBefore($entity, $postionEntity);
+
                         break;
                 }
             }
@@ -57,13 +61,13 @@ class SortableController extends Controller
             return [
                 'success' => true,
             ];
-        } else {
-            return [
+        }
+
+        return [
                 'success' => false,
                 'errors' => $validator->errors(),
                 'failed' => $validator->failed(),
             ];
-        }
     }
 
     /**

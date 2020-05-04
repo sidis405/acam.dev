@@ -1,4 +1,12 @@
 @extends('admin.layouts.master')
+
+@section('header_scripts')
+
+<link rel="stylesheet" type="text/css" href="/css/jquery-ui.css">
+<meta name="_token" content="{{ csrf_token() }}" />
+
+@stop
+
 @section('content')
 
 @include('admin.layouts.title-and-toggle', array('title' => 'Lista Attività'))
@@ -14,23 +22,25 @@
 
 <div class="panel panel-default">
     <div class="panel-body">
-        
+
         <div class="table-responsive">
             <table class="table table-striped">
-                
+
                 <thead>
 
                     <td>Titolo</td>
                     <td>Sottotitolo</td>
                     <td>In Slide</td>
+                    <td>&nbsp;</td>
                 </thead>
-                <tbody>
+                <tbody class="sortable" data-entityname="activities">
                     @foreach($activities as $item)
-                    <tr>
-                        
+                    <tr  data-itemId="{{{ $item->id }}}">
+
                         <td><a href="/admin/attivita/{{$item['id']}}/modifica">{{$item['title']}}</a></td>
                         <td>{{$item['subtitle']}}</td>
                         <td>{{$item['featured']}}</td>
+                        <td class="sortable-handle">&varr;</td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -38,4 +48,11 @@
         </div>
     </div>
 </div>
+@stop
+
+@section('footer_scripts')
+
+<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/sortable-bindings.js"></script>
+
 @stop

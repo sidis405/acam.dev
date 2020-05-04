@@ -3,14 +3,13 @@
 namespace Acam\Repositories;
 
 use Acam\Models\Pages;
-
+use Acam\Models\FeaturedImage;
 
 /**
-*   PagesRepo
-*/
+ *   PagesRepo
+ */
 class PagesRepo
 {
-    
     public function getAll()
     {
         return Pages::all();
@@ -29,8 +28,15 @@ class PagesRepo
     public function getMediaForId($id)
     {
         $page = $this->getById($id);
-        
+
         return $page->getMedia();
     }
 
+    public function removeImage($id)
+    {
+        $image = FeaturedImage::find($id);
+        $image->delete();
+
+        return true;
+    }
 }

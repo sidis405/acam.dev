@@ -8,6 +8,6 @@ class StaffPageTypes extends Model
 {
     public function staff()
     {
-        return $this->hasMany('Acam\Models\Staff', 'page_id');
+        return $this->hasMany('Acam\Models\Staff', 'page_id')->orderBy('position');
     }
 }

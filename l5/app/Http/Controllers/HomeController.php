@@ -4,9 +4,6 @@ namespace App\Http\Controllers;
 
 use Acam\Repositories\ActivitiesRepo;
 use Acam\Repositories\TextRepo;
-use App\Http\Controllers\Controller;
-use App\Http\Requests;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
@@ -19,7 +16,7 @@ class HomeController extends Controller
     public function index(ActivitiesRepo $activities_repo, TextRepo $text_repo)
     {
         Session::put('current_page', 'home');
-        $activities = $activities_repo->getAllFront(9);
+        $activities = $activities_repo->getAllFront(12);
         $featured = $activities_repo->getFeatured();
         $texts = $text_repo->getAll();
 
@@ -30,13 +27,13 @@ class HomeController extends Controller
 
     public function loadMoreActivities(ActivitiesRepo $activities_repo)
     {
-        $activities = $activities_repo->getAllFront(9);
+        $activities = $activities_repo->getAllFront(12);
 
         return [
-            'layout' => view('home.partials.activities-partial', compact('activities'))->render(), 
+            'layout' => view('home.partials.activities-partial', compact('activities'))->render(),
             'url' => str_replace('/?', '?', $activities->nextPageUrl()),
-            'more' => $activities->hasMorePages(), 
-            'galleries' => view('home.partials.activities-partial', compact('activities'))->render()];
+            'more' => $activities->hasMorePages(),
+            'galleries' => view('home.partials.activities-partial', compact('activities'))->render(), ];
     }
 
     public function policy()
@@ -51,8 +48,9 @@ class HomeController extends Controller
     public function pull()
     {
         $out = '';
-        $result = array();
-        $result = shell_exec("/usr/bin/git -c /home/www/sidrit.com/acam.dev pull 2>&1");
+        $result = [];
+        $result = shell_exec('/usr/bin/git -c /home/www/sidrit.com/acam.dev pull 2>&1');
+
         return $result;
     }
 }

@@ -8,8 +8,8 @@ use Acam\Models\FeaturedImage;
 use Acam\Models\StaffPageTypes;
 
 /**
-* Staff Repo
-*/
+ * Staff Repo
+ */
 class StaffRepo
 {
     public function save(Staff $staff)
@@ -59,9 +59,9 @@ class StaffRepo
     {
         if ($howMany) {
             return Staff::with('media', 'featuredImage', 'pageType')->orderBy('position', 'ASC')->simplePaginate($howMany);
-        } else {
-            return Staff::with('media', 'featuredImage', 'pageType')->orderBy('position', 'ASC')->get();
         }
+
+        return Staff::with('media', 'featuredImage', 'pageType')->orderBy('position', 'ASC')->get();
     }
 
     public function getBySlug($slug)
@@ -77,7 +77,7 @@ class StaffRepo
     public function getMediaForId($id)
     {
         $staff = $this->getById($id);
-        
+
         return $staff->getMedia();
     }
 }

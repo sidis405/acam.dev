@@ -22,27 +22,27 @@
 
 <div class="panel panel-default">
     <div class="panel-body">
-        
+
         <div class="table-responsive">
             <table class="table table-striped table-hover">
-                
+
                 <thead>
 
                     <td>&nbsp;</td>
                     <td>Nome</td>
                     <td>Intro</td>
                     <td>Pagina</td>
+                    <td>&nbsp;</td>
                 </thead>
                 <tbody class="sortable" data-entityname="staff">
                     @foreach($staff as $item)
                     <tr data-itemId="{{{ $item->id }}}">
-                        
-
-                        
                         <td><a href="/admin/staff/{{$item['id']}}/modifica"><img class="img-responsive" style="width:40px" src="{{$item->present()->featuredImageUrl()}}" alt=""></a></td>
                         <td><a href="/admin/staff/{{$item['id']}}/modifica">{{$item['name']}}</a></td>
                         <td>{{$item['intro']}}</td>
                         <td>{{$item['pageType']['name']}}</td>
+                        <td class="sortable-handle">&varr;</td>
+
                     </tr>
                     @endforeach
                 </tbody>
